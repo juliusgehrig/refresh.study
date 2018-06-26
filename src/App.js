@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import styles from './App.css';
+import CSSModules from 'react-css-modules';
+
+import TabletFrame from './components/TabletFrame'
 
 class App extends Component {
   render() {
@@ -13,9 +16,10 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <TabletFrame>Hallo</TabletFrame>
       </div>
     );
   }
 }
 
-export default App;
+export default CSSModules(App, styles);

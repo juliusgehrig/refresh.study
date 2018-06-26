@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.4.1",
+    "react-css-modules": "^4.7.3",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
