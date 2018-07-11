@@ -1,40 +1,45 @@
 import CSSModules from 'react-css-modules';
 import React, { Component } from 'react';
 import styles from './DeviceSlider.scss'
-import Carousel from 'nuka-carousel';
-
+import ReactSwipe from 'react-swipe';
 import DeviceFrame from 'components/DeviceFrame';
 
+
+const Tab = CSSModules((props) => (
+	<div onClick={props.onClick}>
+		<div styleName='title'>
+			{props.title}
+		</div>
+		<div styleName='description'>
+			{props.description}
+		</div>
+	</div>
+), styles)
 
 class DeviceSlider extends React.Component {
 	constructor(props) {
 		super(props)
+
 		this.handlePaginationClick = this.handlePaginationClick.bind(this)
 	}
 
 	handlePaginationClick(index) {
-		this.carousel.goToSlide(index)
+		this.carousel.slide(index)
 	}
 
 	render() {
 		const { items } = this.props
-		const settings = {
-			dots: true,
-			infinite: true,
-			speed: 500,
-			slidesToShow: 1,
-			slidesToScroll: 1
-		};
 
 		return (
 			<div styleName="container">
 				<DeviceFrame>
-					<Carousel ref={(c) => { this.carousel = c }}>
+					<ReactSwipe ref={(c) => { this.carousel = c }} >
 						{items.map((item, key) => <div key={key}>{item.element}</div>)}
-					</Carousel>
+					</ReactSwipe>
 				</DeviceFrame>
 				<div styleName="pagination">
-					{items.map((item, key) => <div onClick={() => { this.handlePaginationClick(key) }} key={key}>{item.title}, {item.description}</div>)}
+
+					{items.map((item, key) => <Tab onClick={() => { this.handlePaginationClick(key) }} title={item.title} description={item.description} />)}
 				</div>
 			</div>);
 	}

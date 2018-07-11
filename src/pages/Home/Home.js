@@ -19,7 +19,7 @@ const Home = (props) => {
 			description: 'Lorem ipsum dolor sit amet'
 		},
 		{
-			element: <img src="/assets/images/placeholder/spaces.png" alt="" />,
+			element: <img src="/assets/images/placeholder/header.png" alt="" />,
 			title: 	'Space Switcher',
 			description: 'Lorem ipsum dolor sit amet'
 		},
