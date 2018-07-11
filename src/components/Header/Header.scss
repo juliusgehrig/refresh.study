@@ -1,0 +1,44 @@
+@import "~styles/variables";
+
+.container {
+  position: absolute;
+  width: 100%;
+}
+
+.nav {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+}
+
+.logo, .navLink {
+  line-height: 80px;
+}
+
+.links {
+  display: inherit;
+
+  .navLink {
+    color: $text-grey;
+    text-decoration: none;
+    transition: .2s linear;
+    &:hover {
+      color: white;
+    }
+  }
+
+  .navLinkActive {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+
+  .navLink:first-child {
+    margin-right: 30px;
+  }
+}
