@@ -48,24 +48,71 @@ const Process = (props) => (
           </p>
         </div>
       </div>
+      <div class="col-md-8 col-xs-10">
+        <div class="box">
+          <div styleName="toolWrapper">
+            <div styleName="toolContainer">
+              <div styleName="toolbox">
+                <img styleName="toolIcon" src="/assets/images/Tools/Abstract.png"/>
+                <p styleName="toolTitle">Abstract</p>
+                <p styleName="toolUsecase">Version control</p>
+              </div>
+              <div styleName="toolbox">
+                <img styleName="toolIcon" src="/assets/images/Tools/Notion.png"/>
+                <p styleName="toolTitle">Notion</p>
+                <p styleName="toolUsecase">Writing</p>
+              </div>
+              <div styleName="toolbox">
+                <img styleName="toolIcon" src="/assets/images/Tools/Sketch.png"/>
+                <p styleName="toolTitle">Sketch</p>
+                <p styleName="toolUsecase">Graphic Design</p>
+              </div>
+              <div styleName="toolbox">
+                <img styleName="toolIcon" src="/assets/images/Tools/Framer.png"/>
+                <p styleName="toolTitle">Framer</p>
+                <p styleName="toolUsecase">Prototyping</p>
+              </div>
+              <div styleName="toolbox">
+                <img styleName="toolIcon" src="/assets/images/Tools/Trello.png"/>
+                <p styleName="toolTitle">Trello</p>
+                <p styleName="toolUsecase">Planning</p>
+              </div>
+              <div styleName="toolbox">
+                <img styleName="toolIcon" src="/assets/images/Tools/VSCode.png"/>
+                <p styleName="toolTitle">VS Code</p>
+                <p styleName="toolUsecase">Coding</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-xs-10">
+        <div class="box">
+          <div styleName="contactWrapper">
+            <p styleName="contactText">If you have any questions or just want to say hi you can email us at </p>
+            <p styleName="bigCenteredText">info@refresh.study</p>
+          </div>
+        </div>
+        <div class="box">
+          <div styleName="contactWrapper">
+            <p styleName="contactText">Special thanks go to</p>
+            <p styleName="bigCenteredText">Adreas Ingerl, Hans Pagel, Marvin Labod, Fabricio Rosa Marques, Adam Renklint, Jan Martin, Max Fellmuth, Joshua Söhn, Linus Kuner, Sophia Schiebler, Anna Karmann</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="box">
+          <img styleName="processImage" src="/assets/images/Impressions.png"/>
+        </div>
+      </div>
+      <div class="col-md-7 col-xs-10">
+        <div class="box">
+          <div styleName="contactWrapper">
+            <p styleName="bigCenteredText">Thank you for your time &nbsp;☀️</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/><br/><br/><br/>
-    <br/>
-    <br/>
-    <br/><br/><br/><br/>
-    <br/>
-    <br/>
-    <br/><br/><br/><br/>
-    <br/>
-    <br/>
-    <br/><br/><br/><br/>
-    <br/>
-    <br/>
-    <br/><br/><br/>
     </Wrapper>
   </div>
 );
