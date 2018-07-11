@@ -14,13 +14,19 @@ class Header  extends React.Component {
 	  return (
 			<div styleName="container">
 				<Wrapper>
-					<nav styleName="nav">
-						<h1 styleName="logo">Refresh</h1>
-						<div styleName="links">
-							<NavLink exact className={styles.navLink} activeClassName={styles.navLinkActive} to="/">Overview</NavLink>
-							<NavLink exact className={styles.navLink} activeClassName={styles.navLinkActive} to="/process">Process</NavLink>
+					<div class="row center-xs">
+						<div class="col-xs-10">
+							<div class="box">
+								<nav styleName="nav">
+									<h1 styleName="logo">Refresh</h1>
+									<div styleName="links">
+										<NavLink exact className={styles.navLink} activeClassName={styles.navLinkActive} to="/">Overview</NavLink>
+										<NavLink exact className={styles.navLink} activeClassName={styles.navLinkActive} to="/process">Process</NavLink>
+									</div>
+								</nav>
+							</div>
 						</div>
-					</nav>
+					</div>
 				</Wrapper>
 			</div>
 		);
