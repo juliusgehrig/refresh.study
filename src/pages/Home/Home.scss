@@ -1,0 +1,19 @@
+.section{
+	overflow: hidden;
+	width: 100%;
+}
+.section-spaces{
+	composes: section;
+	padding-top: 200px;
+}
+
+.spaces-device-1-container{
+	height:100px;
+	position:relative;
+}
+.spaces-device-1{
+	width: 1000px;
+	bottom:0;
+	position: absolute;
+	left: 50%;
+}

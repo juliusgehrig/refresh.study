@@ -1,0 +1,79 @@
+.container{
+	position: relative;
+}
+
+.device{
+	z-index: 5;
+	position: relative;
+	background-size: contain;
+	background-repeat: no-repeat;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	
+}
+
+.ipad-landscape{
+	composes: device;
+	padding-top: 71.32867133%;	
+}
+
+.ipad-portrait{
+	composes: device;
+	background-image: url(/assets/images/devices/ipad_grey_portrait.png);
+	padding-top: 140.19607843%
+}
+
+.ipad-grey-landscape{
+	composes: ipad-landscape;
+	background-image: url(/assets/images/devices/ipad_grey_landscape.png);
+}
+
+.ipad-gold-landscape{
+	composes: ipad-landscape;
+	background-image: url(/assets/images/devices/ipad_gold_landscape.png);
+}
+
+.ipad-silver-landscape{
+	composes: ipad-landscape;
+	background-image: url(/assets/images/devices/ipad_silver_landscape.png);
+}
+
+.ipad-grey-portrait{
+	composes: ipad-portrait;
+	background-image: url(/assets/images/devices/ipad_grey_portrait.png);
+}
+
+.ipad-gold-portrait{
+	composes: ipad-portrait;
+	background-image: url(/assets/images/devices/ipad_gold_portrait.png);
+}
+
+.ipad-silver-portrait{
+	composes: ipad-portrait;
+	background-image: url(/assets/images/devices/ipad_silver_portrait.png);
+}
+
+.content{
+	z-index: 1;
+	position: absolute;
+	background-color: blue;
+
+}
+
+.content-ipad-landscape{
+	composes: content;
+	left: calc( 10.1981352% - 1px);
+	right: calc( 10.1981352% - 1px);
+	top: calc(8.169934641% - 1px);
+	bottom: calc(8.169934641% - 1px);
+}
+
+.content-ipad-portrait{
+	composes: content;
+	top: calc(10.1981352% - 1px);
+	bottom:calc( 10.1981352% - 1px);
+	left:calc( 8.169934641% - 1px);;
+	right:calc( 8.169934641% - 1px);
+}

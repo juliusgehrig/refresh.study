@@ -1,0 +1,13 @@
+@import "~styles/variables";
+
+.pre-headline{
+	font-size:21px;
+	color:white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: $red; 
+	line-height: 1;
+	display: inline-block;
+	font-weight: 700;
+	margin-bottom:28px;
+}

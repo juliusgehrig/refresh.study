@@ -1,0 +1,12 @@
+@import "~styles/variables";
+
+.problemBox{
+	padding:25px;
+	font-size:15px;
+	color:$red-dark;
+	background-color:$red-light;
+	border-radius: 5px;
+	p:last-child{
+		margin-bottom:0;
+	}
+}
