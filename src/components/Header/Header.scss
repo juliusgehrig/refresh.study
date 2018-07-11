@@ -27,7 +27,7 @@
   font-size: 20px;
 
   .navLink {
-    color: $text-grey;
+    color: $text-grey-dark;
     text-decoration: none;
     transition: .2s linear;
     &:hover {
@@ -43,4 +43,8 @@
   .navLink:first-child {
     margin-right: 30px;
   }
+}
+
+@include breakpoint(desktop){
+
 }
