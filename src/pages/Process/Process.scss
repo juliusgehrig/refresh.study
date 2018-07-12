@@ -1,10 +1,108 @@
+@import "~styles/variables";
+
 .container {
-  padding-top: 170px;
   background: #000;
+  padding-top: 170px;
 }
 
 .pageTitle {
   font-size: 54px;
   color: white;
   text-align: center;
+  margin-bottom: 10px;
+}
+
+.subheadline {
+  color: $text-grey-dark;
+  text-align: center;
+  margin: 0;
+}
+
+.headline {
+  color: white;
+  font-weight: 500;
+}
+
+.copy {
+  color: $text-grey-dark;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.toolWrapper {
+  margin: 90px 0;
+}
+
+.toolContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.toolbox {
+  width: 49%;
+  display: grid;
+  grid-template-areas:
+    'Icon Name'
+    'Icon Usecase';
+  grid-column-gap: 16px;
+  grid-template-columns: 60px auto;
+  margin-bottom: 40px;
+}
+
+.toolTitle {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Founders Grotesk Test";
+  margin-bottom: 0px;
+  margin-top: 8px;
+  color: #fff;
+}
+
+.toolUsecase {
+  font-size: 14px;
+  margin-bottom: 0px;
+  margin-top: -12px;
+  color: $text-grey-dark;
+}
+
+.toolIcon {
+  grid-area: Icon;
+  width: 60px;
+  height: 60px;
+}
+
+.contactWrapper {
+  text-align: center;
+  color: white;
+}
+
+.contactText {
+  color: $text-grey-dark;
+}
+
+.mailLink {
+  text-decoration: none;
+}
+
+.bigCenteredText {
+  font-size: 32px;
+  font-family: "Founders Grotesk Test";
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  color: white;
+}
+
+.processImage {
+  margin: 70px 0;
+}
+
+@include breakpoint(desktop){
+  .container {
+    padding-top: 170px;
+  }
+  .toolbox {
+    width: 28%;
+  }
 }
