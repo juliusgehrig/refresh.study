@@ -90,7 +90,7 @@ const Process = (props) => (
         <div class="box">
           <div styleName="contactWrapper">
             <p styleName="contactText">If you have any questions or just want to say hi you can email us at </p>
-            <p styleName="bigCenteredText">info@refresh.study</p>
+            <a styleName="mailLink" href="mailto:info@refresh.study"><p styleName="bigCenteredText">info@refresh.study</p></a>
           </div>
         </div>
         <div class="box">
