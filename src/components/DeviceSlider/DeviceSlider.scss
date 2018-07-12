@@ -1,22 +1,46 @@
 @import "~styles/variables";
 
+.tab{
+	flex:1;
+	margin: 0 15px;
+}
+.tab-current{
+	composes: tab
+}
+.tab-current .progress{
+	width: 50%;
+}
 .container{
 	display: block;
 }
 
 .pagination{
-	display: block;
+	display: flex;
+	padding: 0 2%;
 }
 
+.progressBar{
+	background-color:rgba(0,0,0,.1);
+}
 
+.progress{
+	background-color: black;
+	height: 2px;
+	width: 0%;
+}
+
+.title {
+	margin-top: 8px;
+	composes: ts2 from "styles/_typography.scss";
+}
 
 .description{
-	font-size:26px;
+	font-size:14px;
+	color:$text-grey-light;
 }
 
 @include breakpoint(desktop){
 	.title{
 		font-size:26px;
-
 	}
 }

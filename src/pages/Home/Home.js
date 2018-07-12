@@ -16,17 +16,20 @@ const Home = (props) => {
 		{
 			element: <img src="/assets/images/placeholder/spaces.png" alt="" />,
 			title: 	'Space Switcher',
-			description: 'Lorem ipsum dolor sit amet'
+			description: 'Lorem ipsum dolor sit amet',
+			length: 5
 		},
 		{
 			element: <img src="/assets/images/placeholder/header.png" alt="" />,
 			title: 	'Space Switcher',
-			description: 'Lorem ipsum dolor sit amet'
+			description: 'Lorem ipsum dolor sit amet',
+			length: 5
 		},
 		{
 			element: <img src="/assets/images/placeholder/spaces.png" alt="" />,
 			title: 	'Space Switcher',
-			description: 'Lorem ipsum dolor sit amet'
+			description: 'Lorem ipsum dolor sit amet',
+			length: 5
 		}
 	]
 	return(
