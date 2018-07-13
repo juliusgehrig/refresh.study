@@ -1,0 +1,72 @@
+@import "~styles/variables";
+
+.container {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 40px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.whodis {
+  color: $text-grey-dark;
+  font-family: $founders-grotesk;
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+.sectionHeader {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe
+		UI, Helvetica Neue, sans-serif;
+}
+
+.sectionBig {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.sectionSmall {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.textLink  {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all .1s linear;
+}
+
+.pressText {
+  color: $text-grey-dark;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.link {
+  color: $text-grey-dark;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all .2s;
+  display: block;
+  line-height: 30px;
+  &:hover {
+    color: white;
+  }
+}
+
+@include breakpoint(desktop){
+  .sectionBig {
+    width: 55%;
+  }
+  .sectionSmall {
+    width: 33%;
+  }
+}

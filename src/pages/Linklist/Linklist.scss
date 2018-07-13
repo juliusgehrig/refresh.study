@@ -1,0 +1,26 @@
+@import "~styles/variables";
+
+.container {
+  background: #000;
+  padding-top: 170px;
+}
+
+.pageTitle {
+  font-size: 54px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subheadline {
+  color: $text-grey-dark;
+  text-align: center;
+  margin: 0;
+}
+
+.linkWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 70px 0;
+}

@@ -1,0 +1,38 @@
+@import "~styles/variables";
+
+.linkContainer {
+  width: 100%;
+  background: rgba(255,255,255,0);
+  border-radius: 10px;
+  padding: 16px;
+  transition: all .3s cubic-bezier(.15, .8,.3,1.4);
+  margin-bottom: 30px;
+  &:hover {
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.12);
+  }
+}
+
+.linkBox {
+  display: inherit;
+  text-decoration: none;
+}
+
+.linkTitle {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.linkDescription {
+  color: $text-grey-dark;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+@include breakpoint(desktop){
+  .linkContainer {
+    width: 44%;
+  }
+}

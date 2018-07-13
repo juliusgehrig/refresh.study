@@ -4,14 +4,16 @@ import styles from './Process.scss'
 
 import Wrapper from 'components/Wrapper'
 import ToolBox from 'components/ToolBox'
+import RevealText from 'components/RevealText'
+import Footer from 'components/Footer'
 
 const Process = (props) => (
   <div styleName="container">
     <Wrapper>
     <h1 styleName="pageTitle">
-      <span>Design</span> <span>Process</span>
+      <RevealText text="Design Process"></RevealText>
     </h1>
-    <h3 styleName="subheadline">How did we get here?</h3>
+    <h3 styleName="subheadline"><RevealText text="How did we get here?"></RevealText></h3>
     <div class="row center-xs">
       <div class="col-xs-10">
         <div class="box">
@@ -82,15 +84,9 @@ const Process = (props) => (
           <img styleName="processImage" src="/assets/images/Impressions.jpg"/>
         </div>
       </div>
-      <div class="col-md-7 col-xs-10">
-        <div class="box">
-          <div styleName="contactWrapper">
-            <p styleName="bigCenteredText">Thank you for your time &nbsp;☀️</p>
-          </div>
-        </div>
-      </div>
     </div>
     </Wrapper>
+    <Footer></Footer>
   </div>
 );
 
