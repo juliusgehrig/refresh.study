@@ -5,6 +5,7 @@ import styles from './Linklist.scss'
 import Wrapper from 'components/Wrapper'
 import RevealText from 'components/RevealText'
 import LinkListLink from 'components/LinkListLink'
+import Footer from 'components/Footer'
 
 const Linklist = (props) => (
   <div styleName="container">
@@ -30,6 +31,7 @@ const Linklist = (props) => (
         </div>
       </div>
     </Wrapper>
+    <Footer></Footer>
   </div>
 );
 
