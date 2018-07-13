@@ -5,9 +5,28 @@
 	color:white;
 	padding: 5px 10px;
 	border-radius: 5px;
-	background-color: $red; 
 	line-height: 1;
 	display: inline-block;
 	font-weight: 700;
 	margin-bottom:28px;
+}
+
+.pre-headline-red{
+	composes: pre-headline;
+	background-color: $red; 
+}
+
+.pre-headline-cyan{
+	composes: pre-headline;
+	background-color: $cyan; 
+}
+
+.pre-headline-blue{
+	composes: pre-headline;
+	background-color: $blue; 
+}
+
+.pre-headline-orange{
+	composes: pre-headline;
+	background-color: $orange; 
 }

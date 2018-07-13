@@ -2,20 +2,6 @@ import CSSModules from 'react-css-modules';
 import React  from 'react';
 import styles from './DeviceFrame.scss'
 
-const val1 = true
-
-const obj1 = {
-	val1,
-	val2: 5
-}
-
-const object = {
-	...obj1,
-	val3:'hallo'
-}
-
-
-
 const DeviceFrame = (props) => (
 	<div styleName="container">
 		<div styleName={`content-${props.type}-${props.orientation}`}>{props.children}</div>

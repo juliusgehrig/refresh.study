@@ -5,7 +5,7 @@ import styles from './ToolBox.scss'
 
 const ToolBox = (props) => (
   <div styleName="box">
-    <img styleName="icon" src={props.image}/>
+    <img alt={props.title} styleName="icon" src={props.image}/>
     <p styleName="title">{props.title}</p>
     <p styleName="usecase">{props.usecase}</p>
   </div>

@@ -1,5 +1,5 @@
 import CSSModules from 'react-css-modules';
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './DeviceSlider.scss'
 import ReactSwipe from 'react-swipe';
 import DeviceFrame from 'components/DeviceFrame';
@@ -40,9 +40,11 @@ class DeviceSlider extends React.Component {
 
 	handlePaginationClick(index) {
 
-		if (index == this.state.currentSlide) {
+		if (index === this.state.currentSlide) {
 			if (this.items[index].player) {
+				alert('ok')
 				this.items[index].player.seek(0);
+				this.items[index].player.play();
 			}
 			this.setState({
 				progress: this.getProgress(true)
@@ -57,23 +59,20 @@ class DeviceSlider extends React.Component {
 	getProgress(reset = false) {
 		if (reset) {
 			this.items.forEach(item => { item.progress = 0 });
-			console.log(this.items);
 		}
 		return this.items.map(item => item.progress);
 	}
 
 	componentDidMount() {
-		var progress = []
 		this.onSlideChange(0)
 
 		this.items.forEach((item, index) => {
 			item.progress = 0
-			if (item.type == 'video') {
+			if (item.type === 'video') {
 				item.player.subscribeToStateChange((state, prevState) => { this.handleStateChange(state, prevState, index) });
 
 			}
 		})
-		console.log(this.props.items)
 
 		this.setState({ progress: this.getProgress() })
 	}
@@ -81,13 +80,13 @@ class DeviceSlider extends React.Component {
 
 
 	handleStateChange(state, prevState, index) {
-		if (index != this.state.currentSlide) return;
+		if (index !== this.state.currentSlide) return;
 
 		if (state.duration) {
 			this.items[index].progress = state.currentTime / state.duration
 			this.setState({ progress: this.getProgress() })
 		}
-		if (state.paused == true && prevState.paused == false) {
+		if (state.paused === true && prevState.paused === false) {
 			this.carousel.next()
 		}
 	}
@@ -100,7 +99,7 @@ class DeviceSlider extends React.Component {
 			progress: this.getProgress(true)
 		})
 
-		if (this.items[index].type == 'video') {
+		if (this.items[index].type === 'video') {
 			this.items[index].player.seek(0);
 			this.items[index].player.play();
 		} else {
@@ -133,7 +132,7 @@ class DeviceSlider extends React.Component {
 						{items.map((item, key) =>
 							<div key={key}>
 								{
-									item.type == 'video' ?
+									item.type === 'video' ?
 										<Player controls={false} preload="metadata" ref={(c) => { this.items[key].player = c }}>
 											<source src={item.src} />
 											<ControlBar disableCompletely={true} />
@@ -149,7 +148,7 @@ class DeviceSlider extends React.Component {
 					</ReactSwipe>
 				</DeviceFrame>
 				<div styleName="pagination">
-					{items.map((item, key) => <Tab progress={this.state.progress[key]} current={key == this.state.currentSlide} onClick={() => { this.handlePaginationClick(key) }} title={item.title} description={item.description} />)}
+					{items.map((item, key) => <Tab key={key} progress={this.state.progress[key]} current={key === this.state.currentSlide} onClick={() => { this.handlePaginationClick(key) }} title={item.title} description={item.description} />)}
 				</div>
 			</div>);
 	}

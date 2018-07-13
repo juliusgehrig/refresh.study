@@ -1,12 +1,35 @@
 @import "~styles/variables";
 
-.problemBox{
+.problem-box{
 	padding:25px;
+	margin: 0 -25px;
 	font-size:15px;
-	color:$red-dark;
-	background-color:$red-light;
 	border-radius: 5px;
 	p:last-child{
 		margin-bottom:0;
 	}
+}
+
+.problem-box-red{
+	composes: problem-box;
+	color:$red-dark;
+	background-color:$red-light;
+}
+
+.problem-box-cyan{
+	composes: problem-box;
+	color:$cyan-dark;
+	background-color:$cyan-light;
+}
+
+.problem-box-blue{
+	composes: problem-box;
+	color:$blue-dark;
+	background-color:$blue-light;
+}
+
+.problem-box-orange{
+	composes: problem-box;
+	color:$orange-dark;
+	background-color:$orange-light;
 }

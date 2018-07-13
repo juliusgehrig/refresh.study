@@ -10,39 +10,62 @@
   padding-top: 50px;
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
   color: white;
-}
-
-.logo {
-  margin: 0;
+  line-height: 1;
 }
 
 .logo, .navLink {
+  margin: 0;
   line-height: 40px;
+}
+
+
+.linkContainer{
+  margin-right: 30px;
+  align-items: stretch;
+  display: flex;
+
+}
+
+.linkContainer:last-child{
+  margin-right: 0px;
+
 }
 
 .links {
   display: inherit;
   font-family: "Founders Grotesk Test";
   font-size: 18px;
+  position: relative;
 
   .navLink {
     color: $text-grey-dark;
     text-decoration: none;
     transition: .2s linear;
+    
     &:hover {
       color: white;
     }
   }
 
+
+
   .navLinkActive {
     color: white;
-    border-bottom: 1px solid white;
   }
 
-  .navLink:first-child {
-    margin-right: 30px;
-  }
+ 
+}
+
+
+.bar{
+ height:1px;
+ width: 20px;
+ background-color: white;
+ position: absolute;  
+ transition: all .2s; 
+ top:100%;
 }
 
 @include breakpoint(desktop){

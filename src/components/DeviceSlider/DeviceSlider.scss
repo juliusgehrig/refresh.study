@@ -15,11 +15,12 @@
 	composes: tab
 }
 .tab-current .progress{
-	width: 0%;
+	width: 	0%;
 	transition: width .3s linear;
 }
 .container{
 	display: block;
+
 }
 
 .pagination{
@@ -50,6 +51,10 @@
 }
 
 @include breakpoint(desktop){
+	.container{
+		margin-top: 150px;
+		
+	}
 	.title{
 		font-size:26px;
 	}

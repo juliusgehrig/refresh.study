@@ -4,11 +4,14 @@ import styles from './ProblemBox.scss'
 
 
 const ProblemBox = (props) => (
-	<div styleName="problemBox">
+	<div styleName={`problem-box-${props.color}`}>
 		<b>What are we trying to solve?</b>
 		{props.children}
 	</div>
 );
 
+ProblemBox.defaultProps = {
+	color: 'red'
+}
 
 export default CSSModules(ProblemBox, styles);
