@@ -1,0 +1,12 @@
+.fragment{
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all .3s;
+	display: inline-block;
+}
+
+.fragment-revealed{
+	composes: fragment;
+	opacity: 1;
+	transform: translateY(0px);
+}
