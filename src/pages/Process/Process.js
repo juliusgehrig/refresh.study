@@ -9,7 +9,7 @@ const Process = (props) => (
   <div styleName="container">
     <Wrapper>
     <h1 styleName="pageTitle">
-      Design process
+      <span>Design</span> <span>Process</span>
     </h1>
     <h3 styleName="subheadline">How did we get here?</h3>
     <div class="row center-xs">
@@ -21,7 +21,7 @@ const Process = (props) => (
       <div class="col-md-7 col-xs-10">
         <div class="box">
           <h3 styleName="headline">Backstory</h3>
-          <p styleName="copy">We are Julius Sohn and Julius Gehrig, designers and students of communication design at the university of applied sciences Berlin. Refresh is our bachelor thesis and was created at htw Berlin in 2018. When it came to picking a topic we decided that for our bachelor thesis we wanted to create a concept for a new web browser. At first the idea was to create a desktop browser concept but after getting our hands on a new iPad Pro and realising how much more of a pro device it had become compared to older iPad models we decided to pivot and to come up with a concept for a mobile browser and specifically one for iPad even though it can be applied to desktop computers and smartphones as well.
+          <p styleName="copy">We are <a styleName="textLink" href="http://juliussohn.de">Julius Sohn</a> and <a styleName="textLink" href="https://julius.fm">Julius Gehrig</a>, designers and students of communication design at the university of applied sciences Berlin. Refresh is our bachelor thesis and was created at htw Berlin in 2018. When it came to picking a topic we decided that for our bachelor thesis we wanted to create a concept for a new web browser. At first the idea was to create a desktop browser concept but after getting our hands on a new iPad Pro and realising how much more of a pro device it had become compared to older iPad models we decided to pivot and to come up with a concept for a mobile browser and specifically one for iPad even though it can be applied to desktop computers and smartphones as well.
           </p>
         </div>
       </div>

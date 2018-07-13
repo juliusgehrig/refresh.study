@@ -54,7 +54,7 @@
 
 .bigCenteredText {
   font-size: 32px;
-  font-family: "Founders Grotesk Test";
+  font-family: $founders-grotesk;
   font-weight: 600;
   margin-top: 30px;
   margin-bottom: 100px;
@@ -63,6 +63,16 @@
 
 .processImage {
   margin: 70px 0;
+}
+
+.textLink  {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all .1s linear;
+  &:hover {
+    
+  }
 }
 
 @include breakpoint(desktop){
