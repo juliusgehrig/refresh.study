@@ -4,14 +4,15 @@ import styles from './Process.scss'
 
 import Wrapper from 'components/Wrapper'
 import ToolBox from 'components/ToolBox'
+import RevealText from 'components/RevealText'
 
 const Process = (props) => (
   <div styleName="container">
     <Wrapper>
     <h1 styleName="pageTitle">
-      <span>Design</span> <span>Process</span>
+      <RevealText text="Design Process"></RevealText>
     </h1>
-    <h3 styleName="subheadline">How did we get here?</h3>
+    <h3 styleName="subheadline"><RevealText text="How did we get here?"></RevealText></h3>
     <div class="row center-xs">
       <div class="col-xs-10">
         <div class="box">

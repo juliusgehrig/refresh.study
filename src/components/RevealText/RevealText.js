@@ -34,7 +34,7 @@ class RevealText extends Component {
 				<VisibilitySensor onChange={this.onChangeVisibility} />
 				{this.textFragments.map((fragment, index) =>
 					<React.Fragment>
-						<span styleName={`fragment${revealed == true ? '-revealed' : ''}`} style style={{ 'transition-delay': `${index * 0.1}s` }}>{fragment + ' '}</span>  {' '}
+						<span styleName={`fragment${revealed == true ? '-revealed' : ''}`} style style={{ 'transition-delay': `${0.2 + index * 0.12}s` }}>{fragment + ' '}</span>  {' '}
 					</React.Fragment>)}
 			</React.Fragment>
 		)
