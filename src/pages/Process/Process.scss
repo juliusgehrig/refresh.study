@@ -39,39 +39,6 @@
   justify-content: space-between;
 }
 
-.toolbox {
-  width: 49%;
-  display: grid;
-  grid-template-areas:
-    'Icon Name'
-    'Icon Usecase';
-  grid-column-gap: 16px;
-  grid-template-columns: 60px auto;
-  margin-bottom: 40px;
-}
-
-.toolTitle {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: "Founders Grotesk Test";
-  margin-bottom: 0px;
-  margin-top: 8px;
-  color: #fff;
-}
-
-.toolUsecase {
-  font-size: 14px;
-  margin-bottom: 0px;
-  margin-top: -12px;
-  color: $text-grey-dark;
-}
-
-.toolIcon {
-  grid-area: Icon;
-  width: 60px;
-  height: 60px;
-}
-
 .contactWrapper {
   text-align: center;
   color: white;
@@ -101,8 +68,5 @@
 @include breakpoint(desktop){
   .container {
     padding-top: 170px;
-  }
-  .toolbox {
-    width: 28%;
   }
 }

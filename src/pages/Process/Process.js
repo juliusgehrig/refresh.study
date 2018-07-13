@@ -3,6 +3,7 @@ import React  from 'react';
 import styles from './Process.scss'
 
 import Wrapper from 'components/Wrapper'
+import ToolBox from 'components/ToolBox'
 
 const Process = (props) => (
   <div styleName="container">
@@ -52,36 +53,12 @@ const Process = (props) => (
         <div class="box">
           <div styleName="toolWrapper">
             <div styleName="toolContainer">
-              <div styleName="toolbox">
-                <img styleName="toolIcon" src="/assets/images/Tools/Abstract.png"/>
-                <p styleName="toolTitle">Abstract</p>
-                <p styleName="toolUsecase">Version control</p>
-              </div>
-              <div styleName="toolbox">
-                <img styleName="toolIcon" src="/assets/images/Tools/Notion.png"/>
-                <p styleName="toolTitle">Notion</p>
-                <p styleName="toolUsecase">Writing</p>
-              </div>
-              <div styleName="toolbox">
-                <img styleName="toolIcon" src="/assets/images/Tools/Sketch.png"/>
-                <p styleName="toolTitle">Sketch</p>
-                <p styleName="toolUsecase">Graphic Design</p>
-              </div>
-              <div styleName="toolbox">
-                <img styleName="toolIcon" src="/assets/images/Tools/Framer.png"/>
-                <p styleName="toolTitle">Framer</p>
-                <p styleName="toolUsecase">Prototyping</p>
-              </div>
-              <div styleName="toolbox">
-                <img styleName="toolIcon" src="/assets/images/Tools/Trello.png"/>
-                <p styleName="toolTitle">Trello</p>
-                <p styleName="toolUsecase">Planning</p>
-              </div>
-              <div styleName="toolbox">
-                <img styleName="toolIcon" src="/assets/images/Tools/VSCode.png"/>
-                <p styleName="toolTitle">VS Code</p>
-                <p styleName="toolUsecase">Coding</p>
-              </div>
+              <ToolBox title="Abstract" image="/assets/images/Tools/Abstract.png" usecase="Version Control"></ToolBox>
+              <ToolBox title="Notion" image="/assets/images/Tools/Notion.png" usecase="Writing"></ToolBox>
+              <ToolBox title="Sketch" image="/assets/images/Tools/Sketch.png" usecase="Graphic Design"></ToolBox>
+              <ToolBox title="Framer" image="/assets/images/Tools/Framer.png" usecase="Prototyping"></ToolBox>
+              <ToolBox title="Trello" image="/assets/images/Tools/Trello.png" usecase="Planning"></ToolBox>
+              <ToolBox title="VS Code" image="/assets/images/Tools/VSCode.png" usecase="Coding"></ToolBox>
             </div>
           </div>
         </div>
