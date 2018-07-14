@@ -6,9 +6,8 @@
 }
 
 .nav {
-  border-bottom: 1px solid rgba(255,255,255,0.13);
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 40px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -63,12 +62,12 @@
 
 
 .bar{
- height:1px;
+ height:2px;
  width: 20px;
  background-color: white;
  position: absolute;
  transition: all .2s;
- top:125%;
+ top:100%;
 }
 
 @include breakpoint(desktop){
