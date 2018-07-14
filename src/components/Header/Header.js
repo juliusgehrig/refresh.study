@@ -4,6 +4,7 @@ import styles from './Header.scss'
 import { NavLink, withRouter } from 'react-router-dom'
 
 import Wrapper from 'components/Wrapper'
+import {Link} from 'react-router-dom'
 
 
 class Header extends React.Component {
@@ -27,7 +28,7 @@ class Header extends React.Component {
 	}
 	componentDidMount() {
 		const _this = this
-	
+
 		this.updateBar(this.props.location.pathname)
 
 		this.props.history.listen((location, action) => {
@@ -72,7 +73,7 @@ class Header extends React.Component {
 						<div className="col-xs-10">
 							<div className="box">
 								<nav styleName="nav">
-									<h1 styleName="logo">Refresh</h1>
+									<Link styleName="logoLink" to="/"><h1 styleName="logo">Refresh</h1></Link>
 									<div styleName="links">
 										{this.routes.map((route, index) =>
 											<div key={index} styleName='linkContainer' ref={(c) => { this.routes[index].ref = c }}>

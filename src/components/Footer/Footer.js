@@ -18,8 +18,8 @@ const Footer = (props) => (
             </div>
             <div styleName="sectionSmall">
               <h4 styleName="sectionHeader">More info</h4>
-              <Link styleName="link" to="/process">/Design Process</Link>
-              <Link styleName="link" to="/linklist">/Reading List</Link>
+              <Link styleName="link" to="/process">Design Process →</Link>
+              <Link styleName="link" to="/linklist">Reading List →</Link>
             </div>
             <div styleName="sectionBig">
               <h4 styleName="sectionHeader">Press</h4>
