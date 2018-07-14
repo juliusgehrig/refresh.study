@@ -6,9 +6,9 @@
 }
 
 .nav {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-top: 50px;
-  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.13);
+  padding-top: 20px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -21,21 +21,19 @@
   color: white;
 }
 
+.logo {
+  font-size: 32px;
+}
+
 .logo, .navLink {
   margin: 0;
   line-height: 40px;
 }
 
 .linkContainer{
-  margin-right: 30px;
+  margin-left: 30px;
   align-items: stretch;
   display: flex;
-
-}
-
-.linkContainer:last-child{
-  margin-right: 0px;
-
 }
 
 .links {
@@ -70,7 +68,7 @@
  background-color: white;
  position: absolute;
  transition: all .2s;
- top:150%;
+ top:125%;
 }
 
 @include breakpoint(desktop){
