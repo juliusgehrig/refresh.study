@@ -5,6 +5,7 @@ import styles from './Home.scss'
 import Hero from 'components/Hero'
 import Wrapper from 'components/Wrapper'
 import Jens from 'components/Jens'
+import Footer from 'components/Footer'
 import PreHeadline from 'components/PreHeadline'
 import ProblemBox from 'components/ProblemBox'
 import DeviceFrame from 'components/DeviceFrame';
@@ -58,9 +59,6 @@ const Home = (props) => {
 
 			<section styleName="section-spaces">
 				<Wrapper>
-
-					<RevealText text="Hallo Was geht denn?" />
-
 					<div className="row">
 						<div className="col-md-5 col-lg-5">
 							<PreHeadline color="red">Spaces</PreHeadline>
@@ -128,7 +126,7 @@ const Home = (props) => {
 							<PreHeadline color="blue">Context</PreHeadline>
 							<h1>Focus on what’s important</h1>
 							<p>If your browser thinks the website your visiting consists mainly of written information it will ask you if you want to view this site in Reader View. We think this concept could apply to many more scenarios like music, videos, and forms. </p>
-							
+
 						</div>
 						<div className="col-md-6">
 						<ProblemBox color="blue">
@@ -146,6 +144,7 @@ const Home = (props) => {
 				</Wrapper>
 
 			</section>
+			<Footer theme="dark"></Footer>
 
 
 

@@ -9,6 +9,24 @@
   flex-wrap: wrap;
 }
 
+.container-light {
+  composes: container;
+}
+
+.container-dark {
+  composes: container;
+  border-top: 1px solid #DFE1E5;
+  .whodis, .pressText, .link {
+    color: #525252;
+  }
+  .sectionHeader, .textLink {
+    color: black;
+  }
+  .link:hover {
+    color: black;
+  }
+}
+
 .whodis {
   color: $text-grey-dark;
   font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe

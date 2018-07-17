@@ -1,7 +1,8 @@
 @import "~styles/variables";
 
 .box {
-  width: 49%;
+  width: 60%;
+  margin: 0 auto;
   display: grid;
   grid-template-areas:
     'Icon Name'

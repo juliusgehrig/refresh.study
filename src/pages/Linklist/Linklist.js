@@ -33,7 +33,7 @@ const Linklist = (props) => (
         </div>
       </div>
     </Wrapper>
-    <Footer></Footer>
+    <Footer theme="light"></Footer>
   </div>
 );
 

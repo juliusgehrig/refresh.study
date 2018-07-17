@@ -75,7 +75,7 @@ const Process = (props) => (
         <div class="box">
           <div styleName="contactWrapper">
             <p styleName="contactText">Special thanks go to</p>
-            <p styleName="bigCenteredText">Adreas Ingerl, Hans Pagel, Marvin Labod, Fabricio Rosa Marques, Adam Renklint, Jan Martin, Max Fellmuth, Joshua Söhn, Linus Kuner, Sophia Schiebler, Anna Karmann</p>
+            <p styleName="bigCenteredText"><RevealText text="Adreas Ingerl, Hans Pagel, Marvin Labod, Fabricio Rosa Marques, Adam Renklint, Jan Martin, Max Fellmuth, Joshua Söhn, Linus Kuner, Sophia Schiebler, Anna Karmann"></RevealText></p>
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@ const Process = (props) => (
       </div>
     </div>
     </Wrapper>
-    <Footer></Footer>
+    <Footer theme="light"></Footer>
   </div>
 );
 
