@@ -43,7 +43,7 @@ const Home = (props) => {
 			<Wrapper>
 				<div className="row center-xs">
 					<div className="col-lg-8">
-						<p>While web technologies and therefore the web as a whole is in constant progress and web services are making use of these advantages, browsers are still not much more than a frame for websites. From our research on the topic we identified key areas of the browsers that have to be improved to make it more usable for everyone and help the mobile browser catch up in everyday use cases. </p>
+						<p>We spend so much time browsing the web that we hardly even think about the web browser as an app. And while the web itself has undergone big changes in the last twenty years, browsers have remained largely the same. We think there is still room for improvement and Refresh is a collection of ideas for a modern web browser built with touchscreens in mind.</p>
 						<Jens title="Tab management">
 							<p>Managing a lot of open tabs that span across different tasks should be easier to handle. The browser should assist in sorting currently open tabs and making sense of past browsing sessions.</p>
 						</Jens>
