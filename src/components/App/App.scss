@@ -10,6 +10,7 @@ img{
   max-width: 100%;
 }
 
+@import "~styles/fonts";
 :global{
   @import "~styles/grid";
   @import "~styles/typography";
