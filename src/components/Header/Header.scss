@@ -6,8 +6,8 @@
 }
 
 .nav {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-top: 50px;
+  padding-top: 40px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -15,27 +15,29 @@
   line-height: 1;
 }
 
+.logoLink {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  font-size: 32px;
+}
+
 .logo, .navLink {
   margin: 0;
   line-height: 40px;
 }
 
-
 .linkContainer{
-  margin-right: 30px;
+  margin-left: 30px;
   align-items: stretch;
   display: flex;
-
-}
-
-.linkContainer:last-child{
-  margin-right: 0px;
-
 }
 
 .links {
   display: inherit;
-  font-family: "Founders Grotesk Test";
+  font-family: "FG";
   font-size: 18px;
   position: relative;
 
@@ -43,7 +45,7 @@
     color: $text-grey-dark;
     text-decoration: none;
     transition: .2s linear;
-    
+
     &:hover {
       color: white;
     }
@@ -55,16 +57,16 @@
     color: white;
   }
 
- 
+
 }
 
 
 .bar{
- height:1px;
+ height:2px;
  width: 20px;
  background-color: white;
- position: absolute;  
- transition: all .2s; 
+ position: absolute;
+ transition: all .4s;
  top:100%;
 }
 

@@ -1,7 +1,7 @@
 @import "~styles/variables";
 
 .container {
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255,255,255,0.13);
   padding-top: 40px;
   padding-bottom: 10px;
   display: flex;
@@ -9,9 +9,28 @@
   flex-wrap: wrap;
 }
 
+.container-light {
+  composes: container;
+}
+
+.container-dark {
+  composes: container;
+  border-top: 1px solid #DFE1E5;
+  .whodis, .pressText, .link {
+    color: #525252;
+  }
+  .sectionHeader, .textLink {
+    color: black;
+  }
+  .link:hover {
+    color: black;
+  }
+}
+
 .whodis {
   color: $text-grey-dark;
-  font-family: $founders-grotesk;
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe
+		UI, Helvetica Neue, sans-serif;
   font-size: 22px;
   margin-bottom: 0px;
 }

@@ -2,7 +2,7 @@
 
 .container {
   background: #000;
-  padding-top: 170px;
+  padding-top: 140px;
 }
 
 .pageTitle {
@@ -20,7 +20,7 @@
 
 .headline {
   color: white;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .copy {
@@ -54,7 +54,7 @@
 
 .bigCenteredText {
   font-size: 32px;
-  font-family: $founders-grotesk;
+  font-family: 'FG';
   font-weight: 600;
   margin-top: 30px;
   margin-bottom: 100px;
@@ -62,6 +62,7 @@
 }
 
 .processImage {
+  border-radius: 8px;
   margin: 70px 0;
 }
 
@@ -74,6 +75,6 @@
 
 @include breakpoint(desktop){
   .container {
-    padding-top: 170px;
+    padding-top: 140px;
   }
 }

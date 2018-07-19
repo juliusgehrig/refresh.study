@@ -26,12 +26,14 @@ const Linklist = (props) => (
               <LinkListLink link="https://www-s.acm.illinois.edu/macwarriors/projects/trailblazer/" title="Trailblazer: visual browser history" description="Visual browser history app for PowerPC macs"></LinkListLink>
               <LinkListLink link="https://www.ben-evans.com/benedictevans/2017/7/13/creation-and-consumption" title="Creation and consumption" description="Benedict Evans on the clichee that mobile is only used for consumption where PCs are used for creation"></LinkListLink>
               <LinkListLink link="https://9to5mac.com/2018/06/03/mobile-safari-is-holding-the-ipad-back/" title="Mobile Safari is holding the iPad back" description="9to5mac on why mobile safari is preventing the iPad from being a PC replacement"></LinkListLink>
+              <LinkListLink link="https://techcrunch.com/2017/08/25/majority-of-u-s-consumers-still-download-zero-apps-per-month-says-comscore/" title="Majority of U.S. consumers still download zero apps per month, says comScore" description="Interesting statistics on digital media time spent in the US"></LinkListLink>
+              <LinkListLink link="http://gs.statcounter.com/browser-market-share/mobile/" title="Statcounter: Mobile Browser Market Share Worldwide" description="Statistics on global mobile web browser marketshare"></LinkListLink>
             </div>
           </div>
         </div>
       </div>
     </Wrapper>
-    <Footer></Footer>
+    <Footer theme="light"></Footer>
   </div>
 );
 

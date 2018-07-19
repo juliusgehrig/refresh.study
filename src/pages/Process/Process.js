@@ -13,7 +13,7 @@ const Process = (props) => (
     <h1 styleName="pageTitle">
       <RevealText text="Design Process"></RevealText>
     </h1>
-    <h3 styleName="subheadline"><RevealText text="How did we get here?"></RevealText></h3>
+    <h3 styleName="subheadline"><RevealText text="How did we get here"></RevealText></h3>
     <div class="row center-xs">
       <div class="col-xs-10">
         <div class="box">
@@ -23,7 +23,7 @@ const Process = (props) => (
       <div class="col-md-7 col-xs-10">
         <div class="box">
           <h3 styleName="headline">Backstory</h3>
-          <p styleName="copy">We are <a styleName="textLink" href="http://juliussohn.de">Julius Sohn</a> and <a styleName="textLink" href="https://julius.fm">Julius Gehrig</a>, designers and students of communication design at the university of applied sciences Berlin. Refresh is our bachelor thesis and was created at htw Berlin in 2018. When it came to picking a topic we decided that for our bachelor thesis we wanted to create a concept for a new web browser. At first the idea was to create a desktop browser concept but after getting our hands on a new iPad Pro and realising how much more of a pro device it had become compared to older iPad models we decided to pivot and to come up with a concept for a mobile browser and specifically one for iPad even though it can be applied to desktop computers and smartphones as well.
+          <p styleName="copy">We are <a styleName="textLink" target="_blank" href="http://juliussohn.de">Julius Sohn ↗</a> and <a styleName="textLink" target="_blank" href="https://julius.fm">Julius Gehrig ↗</a>, designers and students of communication design at the university of applied sciences Berlin. Refresh is our bachelor thesis and was created at htw Berlin in 2018. When it came to picking a topic we decided that for our bachelor thesis we wanted to create a concept for a new web browser. At first the idea was to create a desktop browser concept but after getting our hands on a new iPad Pro and realising how much more of a pro device it had become compared to older iPad models we decided to pivot and to come up with a concept for a mobile browser and specifically one for iPad even though it can be applied to desktop computers and smartphones as well.
           </p>
         </div>
       </div>
@@ -35,7 +35,7 @@ const Process = (props) => (
       <div class="col-md-7 col-xs-10">
         <div class="box">
           <h3 styleName="headline">Coming up with ideas</h3>
-          <p styleName="copy">When we started working on Refresh we put a lot of effort into researching the history of the web browser over the last 27 years. We read every wikipedia article related to the topic, research papers on mobile internet usage, as well as blog posts and statistics (Fun fact: We emailed Tim-Berners-Lee for Feedback but he never replied). We also ran our own little survey about how people use their web browser. The results can be found here. We downloaded and tested every web browser we could find both for desktop and mobile and compared their feature sets and how they approach different aspects of the browser. From our research we decided that the main areas we wanted to focus on were tab management, saving information for later, and context sensitivity. Some of the solutions for these areas we came up with early on but most were developed through iteration and feedback loops.
+          <p styleName="copy">When we started working on Refresh we put a lot of effort into researching the history of the web browser over the last 27 years. We read every wikipedia article related to the topic, research papers on mobile internet usage, as well as blog posts and statistics (Fun fact: We emailed Tim-Berners-Lee for Feedback but he never replied). We also ran our own little survey about how people use their web browser. The results can be found<a target="_blank" styleName="textLink" href="https://juliusgehrig.typeform.com/report/exkjqK/ksEMahTICqR5cypC"> here ↗</a>. We downloaded and tested every web browser we could find both for desktop and mobile and compared their feature sets and how they approach different aspects of the browser. From our research we decided that the main areas we wanted to focus on were tab management, saving information for later, and context sensitivity. Some of the solutions for these areas we came up with early on but most were developed through iteration and feedback loops.
           </p>
         </div>
       </div>
@@ -75,7 +75,7 @@ const Process = (props) => (
         <div class="box">
           <div styleName="contactWrapper">
             <p styleName="contactText">Special thanks go to</p>
-            <p styleName="bigCenteredText">Adreas Ingerl, Hans Pagel, Marvin Labod, Fabricio Rosa Marques, Adam Renklint, Jan Martin, Max Fellmuth, Joshua Söhn, Linus Kuner, Sophia Schiebler, Anna Karmann</p>
+            <p styleName="bigCenteredText"><RevealText text="Adreas Ingerl, Hans Pagel, Marvin Labod, Fabricio Rosa Marques, Adam Renklint, Jan Martin, Max Fellmuth, Joshua Söhn, Linus Kuner, Sophia Schiebler, Anna Karmann"></RevealText></p>
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@ const Process = (props) => (
       </div>
     </div>
     </Wrapper>
-    <Footer></Footer>
+    <Footer theme="light"></Footer>
   </div>
 );
 

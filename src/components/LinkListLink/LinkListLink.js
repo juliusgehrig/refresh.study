@@ -5,7 +5,7 @@ import styles from './LinkListLink.scss'
 
 const LinkListLink = (props) => (
   <div styleName="linkContainer">
-    <a href={props.link} styleName="linkBox">
+    <a href={props.link} styleName="linkBox" target="_blank">
       <p styleName="linkTitle">{props.title}</p>
       <p styleName="linkDescription">{props.description}</p>
     </a>
