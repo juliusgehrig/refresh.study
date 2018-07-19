@@ -1,5 +1,5 @@
 import CSSModules from 'react-css-modules';
-import React, {Component}  from 'react';
+import React  from 'react';
 import styles from './Home.scss'
 import SearchHeadline from 'components/SearchHeadline'
 import SpacesHeadline from 'components/SpacesHeadline'
