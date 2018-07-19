@@ -42,9 +42,10 @@ class DeviceSlider extends React.Component {
 
 		if (index === this.state.currentSlide) {
 			if (this.items[index].player) {
-				alert('ok')
+				this.carousel.slide(index)
 				this.items[index].player.seek(0);
 				this.items[index].player.play();
+				console.log(index)
 			}
 			this.setState({
 				progress: this.getProgress(true)
@@ -77,6 +78,9 @@ class DeviceSlider extends React.Component {
 		this.setState({ progress: this.getProgress() })
 	}
 
+	play(){
+		this.onSlideChange(0)
+	}
 
 
 	handleStateChange(state, prevState, index) {
@@ -133,7 +137,7 @@ class DeviceSlider extends React.Component {
 							<div key={key}>
 								{
 									item.type === 'video' ?
-										<Player controls={false} preload="metadata" ref={(c) => { this.items[key].player = c }}>
+										<Player muted={true} controls={false} preload="metadata" ref={(c) => { this.items[key].player = c }}>
 											<source src={item.src} />
 											<ControlBar disableCompletely={true} />
 

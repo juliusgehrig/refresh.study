@@ -36,6 +36,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
+    "react-spring": "^5.4.0",
     "react-swipe": "^5.1.1",
     "react-visibility-sensor": "^3.11.0",
     "resolve": "1.6.0",

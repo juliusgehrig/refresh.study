@@ -1,19 +1,12 @@
 import CSSModules from 'react-css-modules';
-import React from 'react';
+import React, {Component}  from 'react';
 import styles from './Home.scss'
+import SearchHeadline from 'components/SearchHeadline'
+import SpacesHeadline from 'components/SpacesHeadline'
 
-import Hero from 'components/Hero'
-import Wrapper from 'components/Wrapper'
-import Jens from 'components/Jens'
-import Footer from 'components/Footer'
-import PreHeadline from 'components/PreHeadline'
-import ProblemBox from 'components/ProblemBox'
-import DeviceFrame from 'components/DeviceFrame';
-import DeviceSlider from 'components/DeviceSlider';
-import RevealText from 'components/RevealText';
 
-const Home = (props) => {
 
+<<<<<<< HEAD
 	const spaceSliderItems = [
 		{
 			src: '/assets/videos/placeholder/test.mp4',
@@ -151,6 +144,20 @@ const Home = (props) => {
 		</div>
 	)
 };
+=======
+class Home  extends React.Component {
+	constructor(props){
+		super(props)
+	}
+	render() {
+	  return (<div>
+>>>>>>> 18507ec85d410a6243c129caba68617e46bad95d
 
+			<SearchHeadline></SearchHeadline>
+			<SpacesHeadline></SpacesHeadline>
+			<p>Lorem ipsum dolor</p>
+		</div>);
+	}
+  }
 
 export default CSSModules(Home, styles);
