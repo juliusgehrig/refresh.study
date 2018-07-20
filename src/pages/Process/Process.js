@@ -17,7 +17,7 @@ const Process = (props) => (
     <div class="row center-xs">
       <div class="col-xs-10">
         <div class="box">
-          <img styleName="processImage" src="/assets/images/ideas.png"/>
+          <img styleName="processImage" src="/assets/images/us.jpg"/>
         </div>
       </div>
       <div class="col-md-7 col-xs-10">
