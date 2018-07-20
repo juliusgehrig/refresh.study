@@ -1,0 +1,53 @@
+h1{
+	border-bottom: 1px solid #DCDDE2;
+	padding-bottom: 25px;
+}
+.section{
+	padding: 100px 0;
+}
+.section-search{
+	composes:section;
+	text-align: center;
+}
+
+.section-previews{
+	composes:section;
+}
+
+.section-spaces{
+	composes:section;
+}
+
+.section-focus{
+	composes:section;
+	p{
+		columns: 2;
+	}
+
+}
+
+.focusControls{
+	display:flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.focusToggle{
+	display:flex;
+	align-items: center;
+}
+
+.focusToggleLabel{
+	font-weight: 500;
+	color: #7F8296;
+	line-height: 1;
+	cursor: pointer;
+}
+.focusToggleLabel-enabled{
+	composes:focusToggleLabel;
+	color: #282A3D;
+}
+
+.focusToggleSwitch{
+	margin: 0 15px;
+}

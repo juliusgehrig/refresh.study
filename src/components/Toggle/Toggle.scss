@@ -1,0 +1,31 @@
+.container{
+	position: relative;
+	background-color: #C3C3C1;
+	width: 58px;
+	height: 30px;
+	border-radius: 5px;
+	transition: all .2s;
+	cursor: pointer;
+}
+
+
+.toggle{
+	position: relative;
+	width:26px;
+	height:26px;
+	background-color: white;
+	box-shadow: 0 4px 7px -3px rgba(0,0,0,0.21);
+	border-radius: 3px;
+	top:2px;
+	left:2px;
+	transition: all .2s;
+}
+
+
+.container-active{
+	composes: container;
+	background-color: #4CD964;
+	.toggle{
+		left:30px
+	}
+}

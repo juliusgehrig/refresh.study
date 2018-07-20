@@ -1,0 +1,43 @@
+
+.container{
+	perspective: 1300px;
+	padding-top:75%;
+	
+}
+
+.itemContainer{
+	perspective: 1300px;
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	
+}
+.flipper{
+	
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-style: preserve-3d;
+	width: 100%;
+box-shadow: 0 22px 44px -20px rgba(0,0,0,0.21);
+border-radius: 5px;
+overflow:hidden;
+
+
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(-180deg);
+}

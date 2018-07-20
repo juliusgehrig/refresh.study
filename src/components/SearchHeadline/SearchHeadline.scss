@@ -1,14 +1,11 @@
 @import '~styles/variables';
-h2{
-	margin-top:200px;
-	margin-left:200px;
-}
+
 .tag{
 	background-color: $blue;
 	color:white;
 	display: inline-block;	
 	position: absolute;
-	padding: 8px 12px 1px 8px;
+	padding: 6px 12px 6px 8px;
 	border-radius: 6px;
 	bottom: -13px;
 }

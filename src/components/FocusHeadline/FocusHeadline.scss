@@ -1,0 +1,13 @@
+@import '~styles/variables';
+
+.headline{
+	color: transparent;
+	text-shadow: 0 0 50px $headline-dark;
+	transition: all 1.5s;
+}
+
+
+.headline-focus{
+	composes:headline;
+	text-shadow: 0 0 0 $headline-dark;
+}

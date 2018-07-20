@@ -1,0 +1,32 @@
+.container{
+	display: flex;
+	position: relative;
+}
+
+.item{
+	padding: 6px 20px;	
+	font-weight: 500;
+	color: #7F8296;
+	cursor: pointer;
+	position: relative;
+	z-index:5;
+	transition: color .2s;
+	&:hover{
+		color: #282A3D;
+	}
+}
+
+.item-active{
+	composes: item;
+	color: #282A3D;
+}
+
+.slider{
+	height: 35px;
+	background: #FFFFFF;
+	box-shadow: 0 4px 7px -3px rgba(0,0,0,0.21);
+	border-radius: 5px;
+	position: absolute
+	
+}
+
