@@ -1,9 +1,18 @@
-h1{
-	border-bottom: 1px solid #DCDDE2;
-	padding-bottom: 25px;
+@import "~styles/variables";
+
+.intro{
+	font-weight: 500;
+	text-align: center;
+}
+
+
+.problem-icon{
+	display: block;
+	margin-bottom: 30px;
 }
 .section{
 	padding: 100px 0;
+	overflow: hidden;
 }
 .section-search{
 	composes:section;
@@ -51,3 +60,22 @@ h1{
 .focusToggleSwitch{
 	margin: 0 15px;
 }
+
+
+
+@include breakpoint(desktop){
+	.intro {
+	  font-size: 25px;
+	  line-height: 41px;
+	}
+  }
+  
+
+  @include breakpoint(mobileonly){
+	.search-tags-screen{
+		width: 180%;
+		max-width: none;
+	}
+  }
+  
+

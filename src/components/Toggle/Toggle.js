@@ -22,6 +22,7 @@ class Toggle  extends React.Component {
 		const {enabled} = this.props
 	  return (
 			<div onClick={this.onToggle} styleName={`container${ enabled ? '-active' : '' }`}>
+				<div styleName="active-background"></div>
 				<div styleName="toggle"></div>
 			</div>
 		);

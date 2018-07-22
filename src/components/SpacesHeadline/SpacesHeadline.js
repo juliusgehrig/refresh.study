@@ -38,7 +38,6 @@ class SpacesHeadline extends React.Component {
 	}
 
 	onChangeVisibility(visible) {
-		console.log(visible)
 		if (!this.state.visible && visible) {
 			this.setState({
 				visible: true

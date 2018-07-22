@@ -6,19 +6,30 @@
 .item{
 	padding: 6px 20px;	
 	font-weight: 500;
-	color: #7F8296;
+	color: #282A3D;
+	opacity: .5;
 	cursor: pointer;
 	position: relative;
 	z-index:5;
-	transition: color .2s;
+	transition: opacity .2s;
+	vertical-align: middle;
 	&:hover{
-		color: #282A3D;
+		opacity: 1;
 	}
+	img{
+		margin-right: 8px;
+	}
+	:global{
+	.iconTab{
+		display: flex;
+		align-items: center;
+	}
+}
 }
 
 .item-active{
 	composes: item;
-	color: #282A3D;
+	opacity: 1;
 }
 
 .slider{

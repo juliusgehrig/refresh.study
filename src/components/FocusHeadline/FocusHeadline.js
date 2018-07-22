@@ -27,7 +27,7 @@ class FocusHeadline extends React.Component {
 		const { visible } = this.state
 		return (
 			<VisibilitySensor delayedCall={true} onChange={this.onChangeVisibility} >
-				<h1 styleName={`headline${visible ? '-focus' : ''}`} >Focus on whats important</h1>
+				<h1  >Focus on whats <span styleName={`headline${visible ? '-focus' : ''}`}>important</span></h1>
 			</VisibilitySensor>
 		);
 	}

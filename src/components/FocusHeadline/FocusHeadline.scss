@@ -1,6 +1,7 @@
 @import '~styles/variables';
 
 .headline{
+	composes: section-headline from "styles/_typography.scss";
 	color: transparent;
 	text-shadow: 0 0 50px $headline-dark;
 	transition: all 1.5s;
@@ -10,4 +11,26 @@
 .headline-focus{
 	composes:headline;
 	text-shadow: 0 0 0 $headline-dark;
+	animation: focus 1.5s ease-out;
+	animation-fill-mode: forwards;
+}
+
+
+
+@keyframes focus {
+	0%{
+		text-shadow: 0 0 50px $headline-dark;
+	}
+	
+	60%{
+		text-shadow: 0 0 20px $headline-dark;
+	}
+
+	65%{
+		text-shadow: 0 0 20px $headline-dark;
+	}
+
+	100%{
+		text-shadow: 0 0 0px $headline-dark;
+	}
 }
