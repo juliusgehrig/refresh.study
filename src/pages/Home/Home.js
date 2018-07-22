@@ -184,7 +184,7 @@ Maybe you’re looking for a website you visited a while ago. Or maybe you’re 
 						</div>
 					</div>
 					<div className="row center-xs">
-						<div className="col-lg-7  col-xs-12">
+						<div className="col-lg-8  col-xs-12">
 							<img styleName="search-tags-screen" src="/assets/images/tag-search.png" alt="" />
 						</div>
 					</div>
