@@ -10,6 +10,7 @@ import Focus from 'components/Focus'
 import Toggle from 'components/Toggle'
 import Hero from 'components/Hero'
 import Wrapper from 'components/Wrapper'
+import DeviceFrame from 'components/DeviceFrame'
 
 
 class Home extends React.Component {
@@ -117,6 +118,9 @@ class Home extends React.Component {
 								<p>Tabs were introduced to the browser to offer the ability to browser multiple websites in one browser window. But they have become a lot more than that. Leaving tabs open is a common way to remind yourself of something later. But those open tabs are there all the time to distract us from what we want to work on right now. Refresh lets you to organise your browsing in Spaces.
 									A Space is a collection of open tabs and pages you saved for later centered around a topic or a part of your life. Bookmarks, favorites, and the reading list are reduced to one simple way to save pages for later. Saved pages are connected to each Space and are previewed visually below your open tabs. They are automatically grouped by categories with the option to create your own groups if you want to.
 								</p>
+								<DeviceFrame>
+									<img src="/assets/images/Space Overview.png"/>
+								</DeviceFrame>
 							</div>
 						</div>
 					</div>
@@ -163,6 +167,9 @@ class Home extends React.Component {
 Maybe you’re looking for a website you visited a while ago. Or maybe you’re just wondering how exactly you landed on the page you’re on right now.
 								 Refresh lets you look at your browsing history in a new way and easily find pages you visited in the past. Get a better overview over your browsing activity, see the flow from page to page, and easily restore sessions using time travel.
 					</p>
+							<DeviceFrame>
+									<img src="/assets/images/History-timeline.png"/>
+								</DeviceFrame>
 							</div>
 						</div>
 					</div>
