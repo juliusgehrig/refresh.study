@@ -1,7 +1,7 @@
 @import '~styles/variables';
+@import '~styles/typography';
 
 .headline{
-	composes: section-headline from "styles/_typography.scss";
 	color: transparent;
 	text-shadow: 0 0 50px $headline-dark;
 	transition: all 1.5s;
@@ -21,7 +21,7 @@
 	0%{
 		text-shadow: 0 0 50px $headline-dark;
 	}
-	
+
 	60%{
 		text-shadow: 0 0 20px $headline-dark;
 	}

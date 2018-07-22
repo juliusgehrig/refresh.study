@@ -1,4 +1,5 @@
 @import "~styles/variables";
+@import "~styles/typography";
 
 .intro{
 	font-weight: 500;
@@ -10,10 +11,12 @@
 	display: block;
 	margin-bottom: 30px;
 }
+
 .section{
 	padding: 100px 0;
 	overflow: hidden;
 }
+
 .section-search{
 	composes:section;
 	text-align: center;
@@ -23,14 +26,18 @@
 	composes:section;
 }
 
-.section-spaces{
-	composes:section;
+.section-intro {
+	p {
+		columns: 2;
+		margin-bottom: 90px;
+		column-gap: 50px;
+	}
 }
 
-.section-focus{
+.section-focus, .section-spaces, .section-history{
 	composes:section;
-	p{
-		columns: 2;
+	p {
+		line-height: 1.8;
 	}
 
 }
@@ -69,7 +76,7 @@
 	  line-height: 41px;
 	}
   }
-  
+
 
   @include breakpoint(mobileonly){
 	.search-tags-screen{
@@ -77,5 +84,3 @@
 		max-width: none;
 	}
   }
-  
-
