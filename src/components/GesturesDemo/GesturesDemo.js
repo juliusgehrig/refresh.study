@@ -199,24 +199,12 @@ class GesturesDemo  extends React.Component {
 	  return (
 			<svg width="800px" height="578px" viewBox="0 0 800 578" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
 			    <defs>
-			        <radialGradient cx="37.8665499%" cy="25.8751733%" fx="37.8665499%" fy="25.8751733%" r="86.2914062%" gradientTransform="translate(0.378665,0.258752),scale(0.722500,1.000000),rotate(56.138410),translate(-0.378665,-0.258752)" id="radialGradient-1">
-			            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
-			            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
-			        </radialGradient>
 			        <rect id="path-2" x="0" y="0" width="800" height="578" rx="26"></rect>
-			        <filter x="-2.5%" y="-3.5%" width="105.0%" height="106.9%" filterUnits="objectBoundingBox" id="filter-3">
+							<filter x="-2.5%" y="-3.5%" width="105.0%" height="106.9%" filterUnits="objectBoundingBox" id="filter-2">
 			            <feGaussianBlur stdDeviation="20" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
 			            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
 			            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
-			            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.0699162138 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
-			            <feGaussianBlur stdDeviation="4" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
-			            <feOffset dx="0" dy="0" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
-			            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
-			            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.148720562 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
-			            <feMerge>
-			                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
-			                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
-			            </feMerge>
+			            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.0699162138 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
 			        </filter>
 			        <rect id="path-4" x="0" y="0" width="686" height="425"></rect>
 			        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
