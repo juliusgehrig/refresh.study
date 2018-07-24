@@ -17,31 +17,31 @@ const Process = (props) => (
     <div class="row center-xs">
       <div class="col-xs-10">
         <div class="box">
-          <img styleName="processImage" src="/assets/images/us.jpg"/>
+          <img alt="Julius und Julius" styleName="processImage" src="/assets/images/us.jpg"/>
         </div>
       </div>
       <div class="col-md-7 col-xs-10">
         <div class="box">
           <h3 styleName="headline">Backstory</h3>
-          <p styleName="copy">We are <a styleName="textLink" target="_blank" href="http://juliussohn.de">Julius Sohn ↗</a> and <a styleName="textLink" target="_blank" href="https://julius.fm">Julius Gehrig ↗</a>, designers and students of communication design. Refresh is our bachelor thesis and was created at htw Berlin in 2018. It's a collection of ideas for a modern web browser for touchscreen devices based on iOS Safari. The prototypes we developed are all designed for iPad but their concepts could apply to desktop and smaller touchscreens as well.
+          <p styleName="copy">We are <a styleName="textLink" target="_blank" rel="noopener noreferrer" href="http://juliussohn.de">Julius Sohn ↗</a> and <a styleName="textLink" target="_blank" rel="noopener noreferrer" href="https://julius.fm">Julius Gehrig ↗</a>, designers and students of communication design. Refresh is our bachelor thesis and was created at htw Berlin in 2018. It's a collection of ideas for a modern web browser for touchscreen devices based on iOS Safari. The prototypes we developed are all designed for iPad but their concepts could apply to desktop and smaller touchscreens as well.
           </p>
         </div>
       </div>
       <div class="col-xs-10">
         <div class="box">
-          <img styleName="processImage" src="/assets/images/ideas.png"/>
+          <img alt="Ideation" styleName="processImage" src="/assets/images/ideas.png"/>
         </div>
       </div>
       <div class="col-md-7 col-xs-10">
         <div class="box">
           <h3 styleName="headline">Coming up with ideas</h3>
-          <p styleName="copy">When we started working on Refresh we put a lot of effort into researching the history of the web browser over the last 27 years. We read every wikipedia article related to the topic, research papers on mobile internet usage, as well as blog posts and statistics (Fun fact: We emailed Tim-Berners-Lee for Feedback but he never replied). We also ran our own little survey about how people use their web browser. The results can be found<a target="_blank" styleName="textLink" href="https://juliusgehrig.typeform.com/report/exkjqK/ksEMahTICqR5cypC"> here ↗</a>. We downloaded and tested every web browser we could find both for desktop and mobile and compared their feature sets and how they approach different aspects of the browser. From our research we decided that the main areas we wanted to focus on were tab management, saving information for later, and context sensitivity. Some of the solutions for these areas we came up with early on but most were developed through iteration and feedback loops.
+          <p styleName="copy">When we started working on Refresh we put a lot of effort into researching the history of the web browser over the last 27 years. We read every wikipedia article related to the topic, research papers on mobile internet usage, as well as blog posts and statistics (Fun fact: We emailed Tim-Berners-Lee for Feedback but he never replied). We also ran our own little survey about how people use their web browser. The results can be found<a target="_blank" rel="noopener noreferrer" styleName="textLink" href="https://juliusgehrig.typeform.com/report/exkjqK/ksEMahTICqR5cypC"> here ↗</a>. We downloaded and tested every web browser we could find both for desktop and mobile and compared their feature sets and how they approach different aspects of the browser. From our research we decided that the main areas we wanted to focus on were tab management, saving information for later, and context sensitivity. Some of the solutions for these areas we came up with early on but most were developed through iteration and feedback loops.
           </p>
         </div>
       </div>
       <div class="col-xs-10">
         <div class="box">
-          <img styleName="processImage" src="/assets/images/framerScreenshot.png"/>
+          <img alt="Framer" styleName="processImage" src="/assets/images/framerScreenshot.png"/>
         </div>
       </div>
       <div class="col-md-7 col-xs-10">
@@ -81,7 +81,7 @@ const Process = (props) => (
       </div>
       <div class="col-xs-12">
         <div class="box">
-          <img styleName="processImage" src="/assets/images/Impressions.jpg"/>
+          <img alt="Impressions" styleName="processImage" src="/assets/images/Impressions.jpg"/>
         </div>
       </div>
     </div>

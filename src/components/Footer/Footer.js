@@ -3,14 +3,13 @@ import React  from 'react';
 import styles from './Footer.scss'
 
 import Wrapper from 'components/Wrapper'
-import RevealText from 'components/RevealText'
 import {Link} from 'react-router-dom'
 
 const Footer = (props) => (
   <Wrapper>
-    <div class="row center-xs">
-      <div class="col-xs-10">
-        <div class="box">
+    <div className="row center-xs">
+      <div className="col-xs-10">
+        <div className="box">
           <footer styleName={`container-${props.theme}`}>
             <div styleName="sectionBig">
               <h4 styleName="sectionHeader">About</h4>
@@ -23,7 +22,7 @@ const Footer = (props) => (
             </div>
             <div styleName="sectionBig">
               <h4 styleName="sectionHeader">Press</h4>
-              <p styleName="pressText">If you'd like to write about Refresh <a styleName="textLink" href="#">Download Our Press Kit</a> for high-res videos and images. Feel free to quote this page and please link back to it. We’re also happy to answer any open questions you might have or give you more background information — <a styleName="textLink" href="mailto:info@refresh.study">Just Email Us</a></p>
+              <p styleName="pressText">If you'd like to write about Refresh <a styleName="textLink" href="/">Download Our Press Kit</a> for high-res videos and images. Feel free to quote this page and please link back to it. We’re also happy to answer any open questions you might have or give you more background information — <a styleName="textLink" href="mailto:info@refresh.study">Just Email Us</a></p>
             </div>
           </footer>
         </div>

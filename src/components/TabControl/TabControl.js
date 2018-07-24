@@ -1,5 +1,5 @@
 import CSSModules from 'react-css-modules';
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './TabControl.scss'
 import { Spring, animated, interpolate } from 'react-spring'
 
@@ -40,7 +40,7 @@ class TabControl extends React.Component {
 		return (
 			<div styleName="container">
 				{items.map((item, index) =>
-					<div onClick={() => { this.selectItem(index) }} key={index} ref={c => { _this.items[index] = c }} styleName={`item${index == currentIndex ? '-active' : ''}`}>
+					<div onClick={() => { this.selectItem(index) }} key={index} ref={c => { _this.items[index] = c }} styleName={`item${index === currentIndex ? '-active' : ''}`}>
 						{item}
 					</div>
 				)}
@@ -63,3 +63,4 @@ TabControl.defaultProps = {
 }
 
 export default CSSModules(TabControl, styles);
+

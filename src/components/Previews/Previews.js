@@ -1,5 +1,5 @@
 import CSSModules from 'react-css-modules';
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './Previews.scss'
 import { Spring,animated, interpolate } from 'react-spring'
 
@@ -24,7 +24,7 @@ class Previews extends React.Component {
 
 
 	componentWillReceiveProps(props, oldProps) {
-		if (this.props.current != props.current) {
+		if (this.props.current !== props.current) {
 			this.setState({
 				currentIndex: props.current
 			})

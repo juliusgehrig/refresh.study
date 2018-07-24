@@ -1,5 +1,5 @@
 import CSSModules from 'react-css-modules';
-import React, { Component } from 'react';
+import React  from 'react';
 import styles from './Focus.scss'
 import { Spring } from 'react-spring'
 
@@ -23,12 +23,12 @@ class Focus extends React.Component {
 	}
 
 	componentWillReceiveProps(props, oldProps) {
-		if (this.props.current != props.current) {
+		if (this.props.current !== props.current) {
 			this.setState({
 				currentIndex: props.current
 			})
 		}
-		if (this.props.enabled != props.enabled) {
+		if (this.props.enabled !== props.enabled) {
 			this.setState({
 				focusEnabled: props.enabled
 			})
@@ -41,7 +41,7 @@ class Focus extends React.Component {
 		return (
 			<div styleName="container" >
 				{this.items.map((item, index) =>
-					<Spring key={index} config={{ tension: 20, friction: 8 }} to={{ opacity: index - currentIndex == 0 ? 1 : 0, translateX: (index - currentIndex) * 50, rotate: focusEnabled ? 180 : 0 }}>
+					<Spring key={index} config={{ tension: 20, friction: 8 }} to={{ opacity: index - currentIndex === 0 ? 1 : 0, translateX: (index - currentIndex) * 50, rotate: focusEnabled ? 180 : 0 }}>
 						{animation =>
 							<div style={{ opacity: animation.opacity, transform: `translateX(${animation.translateX}%)` }} className={styles.itemContainer}>
 								<div style={{ transform: `rotateY(${animation.rotate}deg)` }} className={styles.flipper}>

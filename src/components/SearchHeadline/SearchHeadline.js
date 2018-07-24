@@ -1,5 +1,5 @@
 import CSSModules from 'react-css-modules';
-import React, { Component } from 'react';
+import React  from 'react';
 import styles from './SearchHeadline.scss'
 import { Spring } from 'react-spring'
 import VisibilitySensor from 'react-visibility-sensor';
@@ -43,8 +43,6 @@ class SearchHeadline extends React.Component {
 
 	onChangeVisibility(visible) {
 		
-		console.log(visible)
-
 		if (!this.state.visible && visible) {
 			this.setState({
 				visible: true
@@ -59,7 +57,7 @@ class SearchHeadline extends React.Component {
 	render() {
 		return (
 			<VisibilitySensor delayedCall={true} onChange={this.onChangeVisibility} >
-				<h2 styleName="headline">{this.state.written.length == 0 ? <div style={{ opacity: 0 }}>a</div> : null}{this.state.written}</h2>
+				<h2 styleName="headline">{this.state.written.length === 0 ? <div style={{ opacity: 0 }}>a</div> : null}{this.state.written}</h2>
 			</VisibilitySensor>
 		);
 	}

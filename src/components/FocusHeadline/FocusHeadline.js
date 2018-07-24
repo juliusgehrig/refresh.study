@@ -1,5 +1,5 @@
 import CSSModules from 'react-css-modules';
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './FocusHeadline.scss'
 import VisibilitySensor from 'react-visibility-sensor';
 
@@ -15,7 +15,6 @@ class FocusHeadline extends React.Component {
 	}
 
 	onChangeVisibility(visible) {
-		console.log(visible)
 		if (!this.state.visible && visible) {
 			this.setState({
 				visible: true

@@ -1,5 +1,5 @@
 import CSSModules from 'react-css-modules';
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './SpacesHeadline.scss'
 import { Spring } from 'react-spring'
 import VisibilitySensor from 'react-visibility-sensor';
@@ -56,7 +56,7 @@ class SpacesHeadline extends React.Component {
 			this.setState({
 				progress: progress
 			})
-			if (progress == this.items.length - 1) {
+			if (progress === this.items.length - 1) {
 				clearInterval(interval)
 			}
 		}, 500)
@@ -64,7 +64,7 @@ class SpacesHeadline extends React.Component {
 
 	render() {
 		const { progress } = this.state;
-		const previous = progress == 0 ? 0 : progress - 1
+		const previous = progress === 0 ? 0 : progress - 1
 		return (
 			<VisibilitySensor delayedCall={true} onChange={this.onChangeVisibility} >
 				<h2 styleName="container">

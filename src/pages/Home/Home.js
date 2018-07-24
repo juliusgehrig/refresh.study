@@ -122,7 +122,7 @@ class Home extends React.Component {
 									A Space is a collection of open tabs and pages you saved for later centered around a topic or a part of your life. Bookmarks, favorites, and the reading list are reduced to one simple way to save pages for later. Saved pages are connected to each Space and are previewed visually below your open tabs. They are automatically grouped by categories with the option to create your own groups if you want to.
 								</p>
 								<DeviceFrame>
-									<img src="/assets/images/Space Overview.png"/>
+									<img alt="Space Overview" src="/assets/images/Space Overview.png"/>
 								</DeviceFrame>
 							</div>
 						</div>
@@ -171,7 +171,7 @@ Maybe you’re looking for a website you visited a while ago. Or maybe you’re 
 								 Refresh lets you look at your browsing history in a new way and easily find pages you visited in the past. Get a better overview over your browsing activity, see the flow from page to page, and easily restore sessions using time travel.
 					</p>
 							<DeviceFrame>
-									<img src="/assets/images/History-timeline.png"/>
+									<img alt="History timeline" src="/assets/images/History-timeline.png"/>
 								</DeviceFrame>
 							</div>
 						</div>
@@ -188,7 +188,7 @@ Maybe you’re looking for a website you visited a while ago. Or maybe you’re 
 					</div>
 					<div className="row center-xs">
 						<div className="col-lg-8  col-xs-12">
-							<img styleName="search-tags-screen" src="/assets/images/tag-search.png" alt="" />
+							<img styleName="search-tags-screen" src="/assets/images/tag-search.png" alt="Tag search" />
 						</div>
 					</div>
 				</Wrapper>
