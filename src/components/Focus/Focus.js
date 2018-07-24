@@ -1,7 +1,7 @@
 import CSSModules from 'react-css-modules';
-import React  from 'react';
+import React from 'react';
 import styles from './Focus.scss'
-import { Spring } from 'react-spring'
+import { Spring, animated, interpolate } from 'react-spring'
 
 
 
@@ -35,26 +35,30 @@ class Focus extends React.Component {
 		}
 	}
 
-	
+
 	render() {
 		const { focusEnabled, currentIndex } = this.state
 		return (
 			<div styleName="container" >
 				{this.items.map((item, index) =>
-					<Spring key={index} config={{ tension: 20, friction: 8 }} to={{ opacity: index - currentIndex === 0 ? 1 : 0, translateX: (index - currentIndex) * 50, rotate: focusEnabled ? 180 : 0 }}>
-						{animation =>
-							<div style={{ opacity: animation.opacity, transform: `translateX(${animation.translateX}%)` }} className={styles.itemContainer}>
-								<div style={{ transform: `rotateY(${animation.rotate}deg)` }} className={styles.flipper}>
+					<Spring native key={index} config={{ tension: 20, friction: 8 }}  to={{ opacity: index - currentIndex === 0 ? 1 : 0, translateX: (index - currentIndex) * 50, rotate: focusEnabled ? 180 : 0 }} to={{ opacity: index - currentIndex === 0 ? 1 : 0, translateX: (index - currentIndex) * 50, rotate: focusEnabled ? 180 : 0 }}>
+						{({rotate, translateX, opacity}) =>
+							<animated.div style={{
+								opacity: opacity,
+								transform: interpolate([translateX], translateX => `translateX(${translateX}%)`)
+							}} className={styles.itemContainer}>
+								<animated.div style={{ 
+									transform:  interpolate([rotate], rotate =>`rotateY(${rotate}deg)`)
+									 }} className={styles.flipper}>
 									<div className={styles.front}>
 										<img src={item.default} alt="" />
 									</div>
 									<div className={styles.back}>
 										<img src={item.focus} alt="" />
 									</div>
-								</div>
-							</div>
+								</animated.div>
+							</animated.div>
 						}
-
 					</Spring>
 				)}
 			</div>);
