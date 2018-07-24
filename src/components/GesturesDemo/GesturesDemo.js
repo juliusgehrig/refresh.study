@@ -207,6 +207,12 @@ class GesturesDemo  extends React.Component {
 				transition: 'swipeDown'
 			})
 		},6500)
+    setTimeout(()=>{
+			this.setState({
+				transition: 'pause'
+			})
+      this.startAnimation()
+		},8000)
 	}
 	render() {
 	  return (
