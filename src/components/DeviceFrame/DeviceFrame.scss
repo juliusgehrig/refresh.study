@@ -12,12 +12,11 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	
 }
 
 .ipad-landscape{
 	composes: device;
-	padding-top: 71.32867133%;	
+	padding-top: 71.32867133%;
 }
 
 .ipad-portrait{
@@ -60,6 +59,7 @@
 	z-index: 1;
 	position: absolute;
 	background-color: blue;
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15), 0 100px 80px -60px rgba(0,0,0,0.57);
 
 }
 

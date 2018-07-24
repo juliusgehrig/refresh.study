@@ -10,7 +10,9 @@ import Focus from 'components/Focus'
 import Toggle from 'components/Toggle'
 import Hero from 'components/Hero'
 import Wrapper from 'components/Wrapper'
+import Footer from 'components/Footer'
 import DeviceFrame from 'components/DeviceFrame'
+import GesturesDemo from 'components/GesturesDemo'
 
 
 class Home extends React.Component {
@@ -77,6 +79,7 @@ class Home extends React.Component {
 			<br />
 			<br />
 			<section styleName="section">
+
 				<Wrapper>
 					<div className="row center-xs">
 						<div className="col-lg-8 col-xs-12">
@@ -191,6 +194,22 @@ Maybe you’re looking for a website you visited a while ago. Or maybe you’re 
 				</Wrapper>
 			</section>
 			{this.renderFocus()}
+			<section styleName="section-search">
+				<Wrapper>
+					<div className="row center-xs">
+						<div className="col-lg-5  col-xs-12">
+							<h1>Navigation & Gestures</h1>
+							<p>Navigation in the space overview goes along two axes: The horizontal one being time and the vertical one space. Go left to view your history and downloads (past) or right to open a new tab (future). Go up or down to switch between spaces, opening the previous or next one. Navigation is possible both through interface elements and two-finger-swipe gestures along the respective axis.</p>
+						</div>
+					</div>
+					<div className="row center-xs">
+						<div className="col-lg-10  col-xs-12">
+							<GesturesDemo/>
+						</div>
+					</div>
+				</Wrapper>
+			</section>
+			<Footer theme="dark"></Footer>
 		</div >
 		);
 	}
