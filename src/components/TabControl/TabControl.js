@@ -1,14 +1,14 @@
 import CSSModules from 'react-css-modules';
 import React, { Component } from 'react';
 import styles from './TabControl.scss'
-import { Spring } from 'react-spring'
+import { Spring, animated, interpolate } from 'react-spring'
 
 
 
 class TabControl extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state={
+		this.state = {
 			currentIndex: false
 		}
 
@@ -21,17 +21,17 @@ class TabControl extends React.Component {
 		})
 	}
 
-	selectItem(index){
+	selectItem(index) {
 		this.setState({
 			currentIndex: index
 		})
 		console.log(index)
 		this.props.onSelect(index)
 	}
-	getSliderOffset(){
+	getSliderOffset() {
 		const { currentIndex } = this.state
 		const offset = this.items[currentIndex].offsetLeft
-		return offset + 'px'
+		return offset 
 	}
 	render() {
 		const { items } = this.props
@@ -40,13 +40,16 @@ class TabControl extends React.Component {
 		return (
 			<div styleName="container">
 				{items.map((item, index) =>
-					<div onClick={()=>{this.selectItem(index)}} key={index} ref={c => { _this.items[index] = c }} styleName={`item${index == currentIndex ? '-active' : ''}`}>
+					<div onClick={() => { this.selectItem(index) }} key={index} ref={c => { _this.items[index] = c }} styleName={`item${index == currentIndex ? '-active' : ''}`}>
 						{item}
 					</div>
 				)}
 				{currentIndex !== false &&
-					<Spring config={{ tension: 80, friction: 7 }} from={{left:this.getSliderOffset() , width: this.items[currentIndex].offsetWidth }} to={{left:this.getSliderOffset(), width: this.items[currentIndex].offsetWidth }}>
-						{animation => <div style={animation} className={styles.slider}></div>}
+					<Spring native config={{ tension: 80, friction: 7 }} to={{ x: this.getSliderOffset(), width: this.items[currentIndex].offsetWidth }}>
+						{({ x, width }) => <animated.div style={{
+							width: width,
+							transform: interpolate([x], x => `translateX(${x}px)`)
+						}} className={styles.slider}></animated.div>}
 					</Spring>
 				}
 
@@ -56,7 +59,7 @@ class TabControl extends React.Component {
 }
 
 TabControl.defaultProps = {
-	onSelect : (index) =>{}
+	onSelect: (index) => { }
 }
 
 export default CSSModules(TabControl, styles);
