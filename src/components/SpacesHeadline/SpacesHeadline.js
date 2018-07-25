@@ -68,7 +68,7 @@ class SpacesHeadline extends React.Component {
 		return (
 			<VisibilitySensor delayedCall={true} onChange={this.onChangeVisibility} >
 				<h2 styleName="container">
-					<div>A space for </div>
+					<div>A Space for </div>
 					<div styleName="slider-container">
 						<div styleName="cropper">
 							<Spring config={{ tension: 80, friction: 7 }} from={{ progress: previous }} to={{ progress }}>

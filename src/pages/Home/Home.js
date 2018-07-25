@@ -42,7 +42,7 @@ class Home extends React.Component {
 							<div styleName="section-intro">
 								<FocusHeadline />
 								<p>The fact that a lot of websites are still not optimised for mobile consumption forces us to think about the reasons for that. Mobile optimisation is a costly undertaking which many website owners can't afford, leading to users switching to mobile optimised alternatives of big players and polarising the market. Supporting creators by letting browsers to do more of the work can slow this process down on one hand and achieve better compatibility with older devices on the other hand.
-								Even though are plenty of apps that satisfy most needs, the web browser is still the main access point to the Internet for the average user. If your browser thinks the website your visiting consists mainly of written information it will ask you if you want to view this site in Reader View. Refresh applies this to many more scenarios like music, videos, and forms.
+								If the browser detects that a website consists mainly of written information it suggests to view this site in Reader Mode. Refresh applies this concept to articles, forms, and music.
 								</p>
 							</div>
 						</div>
@@ -82,7 +82,7 @@ class Home extends React.Component {
 
 				<Wrapper>
 					<div className="row center-xs">
-						<div className="col-lg-8 col-xs-12">
+						<div className="col-lg-8 col-xs-10">
 							<p styleName="intro">
 								We spend so much time browsing the web that we hardly even think about the browser as an app. And while the web itself has undergone big changes in the last twenty years, browsers have remained largely the same. Refresh is a concept for a modern web browser based on iOS Safari.
 					</p>
@@ -90,20 +90,20 @@ class Home extends React.Component {
 					</div>
 				</Wrapper>
 			</section>
-			<section styleName="section">
+			<section styleName="section-problems">
 				<Wrapper>
 					<div className="row center-xs">
-						<div className="col-lg-4 col-xs-12">
+						<div className="col-lg-4 col-xs-10">
 							<img styleName="problem-icon" src="/assets/images/icons/tab-management.svg" alt="Tab management" />
 							<h2>Tab management</h2>
 							<p>Managing a lot of open tabs that span across different tasks should be easier to handle. Browsers should help in sorting open tabs and making sense of past browsing sessions.</p>
 						</div>
-						<div className="col-lg-4  col-xs-12">
+						<div className="col-lg-4  col-xs-10">
 							<img styleName="problem-icon" src="/assets/images/icons/saving-information.svg" alt="Saving and recalling" />
 							<h2>Saving and recalling</h2>
 							<p>Saving information and files for later should be more intuitive. The browser should help categorising saved information and surface it when it could be relevant. </p>
 						</div>
-						<div className="col-lg-4  col-xs-12">
+						<div className="col-lg-4  col-xs-10">
 							<img styleName="problem-icon" src="/assets/images/icons/context-sensitivity.svg" alt="Context sensitivity" />
 							<h2>Context sensitivity</h2>
 							<p>Browsers should be more proactive in suggesting useful actions depending the different types of websites that you’re visiting. </p>
@@ -115,7 +115,7 @@ class Home extends React.Component {
 			<section styleName="section-spaces">
 				<Wrapper>
 					<div className="row middle-xs center-xs">
-						<div className="col-lg-10  col-xs-12">
+						<div className="col-lg-10  col-xs-10">
 							<div styleName="section-intro">
 								<h1 styleName="section-headline">Stay Organised</h1>
 								<p>Tabs were introduced to the browser to offer the ability to browser multiple websites in one browser window. But they have become a lot more than that. Leaving tabs open is a common way to remind yourself of something later. But those open tabs are there all the time to distract us from what we want to work on right now. Refresh lets you to organise your browsing in Spaces.
@@ -136,34 +136,54 @@ class Home extends React.Component {
 				<br/>
 				<br/>
 					<div className="row middle-xs center-xs">
-						<div className="col-lg-5  col-xs-12">
+						<div className="col-lg-4  col-xs-10">
 							<SpacesHeadline></SpacesHeadline>
-							<p>When saving a website it gets categorized by type and content and added to the current space. When browsing through you space you can easily find all saved video in the video category. Saved websites appear in the category with a preview, showing contextual information depending on its type.</p>
+							<p>Create a space for work, one for research of your thesis, and one for that Thailand trip you’ve been planning. Every time you switch between Spaces all open tabs and saved links are still there, but they won’t disturb you when you want to focus on something different.</p>
 						</div>
-						<div className="col-lg-4  col-xs-12">
+						<div className="col-lg-4  col-xs-10">
+							<img alt="Create New Space" styleName="new-space-img" src="/assets/images/newspace.png"/>
 						</div>
 					</div>
-				</Wrapper>
-			</section>
-			<section styleName="section-previews">
-				<Wrapper>
 					<div className="row middle-xs center-xs">
-						<div className="col-lg-6  col-xs-12">
-							<h2>Types & categories</h2>
-							<p>When saving a website it gets categorized by type and content and added to the current space. When browsing through you space you can easily find all saved video in the video category. Saved websites appear in the category with a preview, showing contextual information depending on its type.</p>
-							<TabControl onSelect={index => { this.setState({ currentPreview: index }) }} items={['Video & Music', 'Articles', 'Shopping', 'Events']} />
+						<div className="col-lg-8  col-xs-10">
+							<div styleName="flex-wrapper">
+								<div styleName="flex-container">
+									<img alt="Space Switcher" styleName="space-switcher-img" src="/assets/images/switcher.png"/>
+								</div>
+								<div styleName="flex-container">
+									<p>Quickly switch between Spaces using the Space Switcher. It can be accessed from the tab overview or the address bar.</p>
+								</div>
+							</div>
 						</div>
-						<div className="col-lg-5  col-xs-12">
-							<Previews current={currentPreview} ></Previews>
+						<div className="col-lg-8  col-xs-10">
+							<div styleName="flex-wrapper">
+								<div styleName="flex-container">
+									<p styleName="share-space-text">Share a space with one or more friends to collaborate on it. All saved sites are kept in sync between the collaborators.</p>
+								</div>
+								<div styleName="flex-container">
+									<img alt="Space Switcher" styleName="share-space-img" src="/assets/images/share_space.png"/>
+								</div>
+							</div>
 						</div>
-
+					</div>
+					<div styleName="section-previews">
+						<div className="row middle-xs center-xs">
+							<div className="col-lg-6 col-xs-10">
+								<h2>Types & Categories</h2>
+								<p>Saved links are automatically categorised by type and content when they’re added to a Space. A preview is generated based on the content type of the link showing contextual information.</p>
+								<TabControl onSelect={index => { this.setState({ currentPreview: index }) }} items={['Shopping', 'Articles', 'Video & Music', 'Events']} />
+							</div>
+							<div className="col-lg-5  col-xs-12">
+								<Previews current={currentPreview} ></Previews>
+							</div>
+						</div>
 					</div>
 				</Wrapper>
 			</section>
 			<section styleName="section-history">
 				<Wrapper>
 					<div className="row middle-xs center-xs">
-						<div className="col-lg-10  col-xs-12">
+						<div className="col-lg-10  col-xs-10">
 							<div styleName="section-intro">
 							<h1 styleName="section-headline">Browsing History</h1>
 							<p>Finding pages you have visited a while ago can get tricky if you can’t remember the exact page title or URL. And the browsing history in most browsers is nothing more than a list of links without context or information on the relations between them.
@@ -181,7 +201,7 @@ Maybe you’re looking for a website you visited a while ago. Or maybe you’re 
 			<section styleName="section-search">
 				<Wrapper>
 					<div className="row center-xs">
-						<div className="col-lg-5  col-xs-12">
+						<div className="col-lg-5 col-md-8 col-sm-10 col-xs-10">
 							<SearchHeadline></SearchHeadline>
 							<p>Sometimes it’s hard to remember the exact title or URL of a page you visited but you can remember roughly when or where you visited it. The tag based search in the address bar helps with fuzzy searching your history by locations, date, time, and wether an page has been saved or not. </p>
 						</div>
@@ -197,13 +217,13 @@ Maybe you’re looking for a website you visited a while ago. Or maybe you’re 
 			<section styleName="section-search">
 				<Wrapper>
 					<div className="row center-xs">
-						<div className="col-lg-5  col-xs-12">
+						<div className="col-lg-5  col-xs-10">
 							<h1>Navigation & Gestures</h1>
 							<p>Navigation in the space overview goes along two axes: The horizontal one being time and the vertical one space. Go left to view your history and downloads (past) or right to open a new tab (future). Go up or down to switch between spaces, opening the previous or next one. Navigation is possible both through interface elements and two-finger-swipe gestures along the respective axis.</p>
 						</div>
 					</div>
 					<div className="row center-xs">
-						<div className="col-lg-10  col-xs-12">
+						<div className="col-lg-10  col-xs-10">
 							<GesturesDemo/>
 						</div>
 					</div>

@@ -2,7 +2,7 @@
 .container{
 	perspective: 1300px;
 	padding-top:75%;
-	
+
 }
 
 .itemContainer{
@@ -11,10 +11,10 @@
 	left:0;
 	top:0;
 	width:100%;
-	
+
 }
 .flipper{
-	
+
 	transform-style: preserve-3d;
 	position: relative;
 }

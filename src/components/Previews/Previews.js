@@ -13,10 +13,10 @@ class Previews extends React.Component {
 		}
 
 		this.items = [
-			'/assets/images/placeholder/preview-video.svg',
+			'/assets/images/placeholder/preview-product.svg',
 			'/assets/images/placeholder/preview-article.svg',
 			'/assets/images/placeholder/preview-video.svg',
-			'/assets/images/placeholder/preview-article.svg'
+			'/assets/images/placeholder/preview-event.svg'
 		]
 
 		this.changeIndex = this.changeIndex.bind(this)
@@ -43,10 +43,10 @@ class Previews extends React.Component {
 					<div key={index}  >
 						<Spring native config={{tension:40 }} to={{  y: (5*index - currentIndex), scale: 1 - (0.05 *(index - currentIndex)),  opacity: index - currentIndex < 0 ? 0 : 1 - (0.3 * (index - currentIndex)) }}>
 							{({opacity,y,scale}) =>
-								<animated.div style={{ 
-									opacity: opacity, 
+								<animated.div style={{
+									opacity: opacity,
 									transform: interpolate([y,scale],(y,scale) => `translateY(${y}%) scale(${scale})`),
-									 zIndex: 99 - index 
+									 zIndex: 99 - index
 									 }} className={styles.item}>
 									<img src={item} alt="" />
 								</animated.div>

@@ -17,7 +17,7 @@ $lower-gradient-height: 10px;
   position: absolute;
   height:120px;
   bottom:-1 * $lower-gradient-height;
-  width:300px;
+  width:280px;
   overflow:hidden;
 }
 
@@ -40,24 +40,24 @@ $lower-gradient-height: 10px;
 	width:100%;
 	z-index:99
   }
-  
+
 
 .cropper:before{
 	 @include cropper-gradient();
-	background: linear-gradient(to bottom, $body-background 0%,rgba($body-background,0) 100%); 
+	background: linear-gradient(to bottom, $body-background 0%,rgba($body-background,0) 100%);
 	top:0;
 	height:80px;
-  
+
   }
-  
-  
+
+
 .cropper:after{
 	 @include cropper-gradient();
-	 background: linear-gradient(to top, $body-background 0%,rgba($body-background,0) 100%); 
+	 background: linear-gradient(to top, $body-background 0%,rgba($body-background,0) 100%);
 	 bottom:0;
-	height:$lower-gradient-height;  
+	height:$lower-gradient-height;
   }
-  
+
 
 .item-container{
 	position:absolute;

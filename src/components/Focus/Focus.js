@@ -16,8 +16,11 @@ class Focus extends React.Component {
 			default: '/assets/images/placeholder/music-focus-off.png',
 			focus: '/assets/images/placeholder/music-focus.png'
 		}, {
-			default: '/assets/images/placeholder/music-focus-off.png',
+			default: '/assets/images/placeholder/reader-focus-off.png',
 			focus: '/assets/images/placeholder/reader-focus.png'
+		}, {
+			default: '/assets/images/placeholder/reader-focus-off.png',
+			focus: '/assets/images/placeholder/form-focus.png'
 		}]
 
 	}
@@ -47,7 +50,7 @@ class Focus extends React.Component {
 								opacity: opacity,
 								transform: interpolate([translateX], translateX => `translateX(${translateX}%)`)
 							}} className={styles.itemContainer}>
-								<animated.div style={{ 
+								<animated.div style={{
 									transform:  interpolate([rotate], rotate =>`rotateY(${rotate}deg)`)
 									 }} className={styles.flipper}>
 									<div className={styles.front}>
