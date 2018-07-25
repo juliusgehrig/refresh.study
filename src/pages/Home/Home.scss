@@ -86,7 +86,6 @@
 
 .share-space-img {
 	border-radius: 14px;
-	margin-top: -160px;
 }
 
 .flex-wrapper {
@@ -97,10 +96,11 @@
 }
 
 .flex-container {
-	width: 45%;
+	width: 100%;
 	margin: 0;
 	p {
-		width: 277px;
+		width: 100%;
+		text-align: center;
 	}
 }
 
@@ -124,16 +124,27 @@
 	  font-size: 25px;
 	  line-height: 41px;
 	}
+	.flex-container {
+		width: 45%;
+	}
+	.share-space-img {
+		margin-top: -160px;
+	}
 	.section-intro {
 		p {
 			columns: 2;
 			column-gap: 50px;
 		}
 	}
+	.flex-container {
+		p {
+			width: 277px;
+		}
+	}
 	.section-problems {
 		text-align: left;
 	}
-  }
+}
 
 
   @include breakpoint(mobileonly){
@@ -147,7 +158,7 @@
 	}
 	.section-problems {
 		p {
-			margin-bottom: 60px;	
+			margin-bottom: 60px;
 		}
 	}
   }

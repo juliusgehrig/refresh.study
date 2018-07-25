@@ -1,6 +1,9 @@
+@import "~styles/variables";
+@import "~styles/typography";
+
 svg {
   margin-top: 60px;
   margin-bottom: 40px;
-  border-radius: 26px;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15), 0 100px 80px -80px rgba(0,0,0,0.57);
+  max-width: 100%;
+  height: auto;
 }
