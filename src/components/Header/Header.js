@@ -21,7 +21,7 @@ class Header extends React.Component {
 			},
 			{
 				path: '/process',
-				title: 'Process'
+				title: 'About'
 			}
 		]
 		this.linkRefs = []

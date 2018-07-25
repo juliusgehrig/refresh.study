@@ -13,6 +13,8 @@ import Wrapper from 'components/Wrapper'
 import Footer from 'components/Footer'
 import DeviceFrame from 'components/DeviceFrame'
 import GesturesDemo from 'components/GesturesDemo'
+import TabsIcon from 'components/TabsIcon'
+import ContextIcon from 'components/ContextIcon'
 
 
 class Home extends React.Component {
@@ -94,7 +96,9 @@ class Home extends React.Component {
 				<Wrapper>
 					<div className="row center-xs">
 						<div className="col-lg-4 col-xs-10">
-							<img styleName="problem-icon" src="/assets/images/icons/tab-management.svg" alt="Tab management" />
+							<div styleName="problem-icon">
+								<TabsIcon/>
+							</div>
 							<h2>Tab management</h2>
 							<p>Managing a lot of open tabs that span across different tasks should be easier to handle. Browsers should help in sorting open tabs and making sense of past browsing sessions.</p>
 						</div>
@@ -104,7 +108,9 @@ class Home extends React.Component {
 							<p>Saving information and files for later should be more intuitive. The browser should help categorising saved information and surface it when it could be relevant. </p>
 						</div>
 						<div className="col-lg-4  col-xs-10">
-							<img styleName="problem-icon" src="/assets/images/icons/context-sensitivity.svg" alt="Context sensitivity" />
+							<div styleName="problem-icon">
+								<ContextIcon/>
+							</div>
 							<h2>Context sensitivity</h2>
 							<p>Browsers should be more proactive in suggesting useful actions depending the different types of websites that you’re visiting. </p>
 						</div>
@@ -169,8 +175,8 @@ class Home extends React.Component {
 					<div styleName="section-previews">
 						<div className="row middle-xs center-xs">
 							<div className="col-lg-6 col-xs-10">
-								<h2>Types & Categories</h2>
-								<p>Saved links are automatically categorised by type and content when they’re added to a Space. A preview is generated based on the content type of the link showing contextual information.</p>
+								<h2>Smart link previews</h2>
+								<p>Saved links are automatically categorised by type and content when they’re added to a Space. A preview is generated based on the content type of the link that displays contextual information.</p>
 								<TabControl onSelect={index => { this.setState({ currentPreview: index }) }} items={['Shopping', 'Articles', 'Video & Music', 'Events']} />
 							</div>
 							<div className="col-lg-5  col-xs-12">

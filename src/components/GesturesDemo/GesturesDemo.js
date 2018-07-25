@@ -217,7 +217,7 @@ class GesturesDemo  extends React.Component {
 	render() {
 	  return (
 			<VisibilitySensor delayedCall={true} onChange={this.onChangeVisibility} >
-				<svg preserveAspectRatio="xMinYMin meet" width="800px" height="578px" viewBox="0 0 800 578" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+				<svg styleName="GestureSVG" preserveAspectRatio="xMinYMin meet" width="800px" height="578px" viewBox="0 0 800 578" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
 				    <defs>
 				        <rect id="path-2" x="0" y="0" width="800" height="578" rx="26"></rect>
 								<filter x="-2.5%" y="-3.5%" width="105.0%" height="106.9%" filterUnits="objectBoundingBox" id="filter-2">
