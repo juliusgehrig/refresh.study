@@ -6,6 +6,7 @@ import Wrapper from 'components/Wrapper'
 import ToolBox from 'components/ToolBox'
 import RevealText from 'components/RevealText'
 import Footer from 'components/Footer'
+import CookieBanner from 'components/CookieBanner'
 
 const Process = (props) => (
   <div styleName="container">
@@ -13,7 +14,7 @@ const Process = (props) => (
     <h1 styleName="pageTitle">
       <RevealText text="About"></RevealText>
     </h1>
-    <h3 styleName="subheadline"><RevealText text="How did we get here"></RevealText></h3>
+    <h3 styleName="subheadline"><RevealText text="Who / Why / How"></RevealText></h3>
     <div class="row center-xs">
       <div class="col-sm-10 col-xs-11">
         <div class="box">
@@ -85,6 +86,7 @@ const Process = (props) => (
         </div>
       </div>
     </div>
+    <CookieBanner/>
     </Wrapper>
     <Footer theme="light"></Footer>
   </div>
