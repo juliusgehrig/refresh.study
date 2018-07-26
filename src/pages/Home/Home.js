@@ -149,16 +149,20 @@ class Home extends React.Component {
 						</div>
 					</div>
 					<div className="row middle-xs center-xs">
-						<div className="col-lg-6 col-md-6 col-sm-6 col-xs-11">
+						<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
+							<br/>
 							<img alt="Space Switcher" styleName="space-switcher-img" src="/assets/images/switcher.png"/>
 						</div>
-						<div className="col-lg-6 col-md-6 col-sm-6 col-xs-11">
+						<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
+							<br/>
 							<p styleName="space-switcher-text">Quickly switch between Spaces using the Space Switcher. It can be accessed from the tab overview or the address bar.</p>
 						</div>
-						<div className="col-lg-6 col-md-6 col-sm-6 col-xs-11">
+						<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
+							<br/>
 							<p styleName="share-space-text">Share a space with one or more friends to collaborate on it. All saved sites are kept in sync between the collaborators.</p>
 						</div>
-						<div className="col-lg-6 col-md-6 col-sm-6 col-xs-11">
+						<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
+							<br/>
 							<img alt="Space Switcher" styleName="share-space-img" src="/assets/images/share_space.png"/>
 						</div>
 					</div>
@@ -169,7 +173,9 @@ class Home extends React.Component {
 								<p>Saved links are automatically categorised by type and content when they’re added to a Space. A preview is generated based on the content type of the link that displays contextual information.</p>
 								<TabControl onSelect={index => { this.setState({ currentPreview: index }) }} items={['Shopping', 'Articles', 'Video & Music', 'Events']} />
 							</div>
-							<div className="col-lg-6 col-md-5 col-xs-11">
+							<div className="col-lg-5 col-md-5 col-xs-11">
+								<br/>
+								<br/>
 								<Previews current={currentPreview} ></Previews>
 							</div>
 						</div>

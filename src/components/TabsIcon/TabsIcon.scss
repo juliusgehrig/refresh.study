@@ -35,13 +35,16 @@
 
 .tab_inactive_2 {
   animation: tab_2 2s cubic-bezier(.15, .8,.3,1.2) infinite;
+  opacity: 0;
 }
 
 @keyframes tab_2 {
   0%,20% {
     transform: translateX(0px) translateY(-0px);
+    opacity: 0;
   }
   100% {
     transform: translateX(8px) translateY(-8px);
+    opacity: 0.4;
   }
 }

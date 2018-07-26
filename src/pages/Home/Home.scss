@@ -15,7 +15,7 @@
 }
 
 .section{
-	padding: 70px 0;
+	padding: 30px 0;
 	overflow: hidden;
 }
 
@@ -78,11 +78,11 @@
 }
 
 .new-space-img, .share-space-img {
-	width: 350px;
+	width: 100%;
 }
 
 .space-switcher-img {
-	width: 270px;
+	width: 100%;
 	margin-left: auto;
 }
 
@@ -92,12 +92,12 @@
 
 .share-space-text {
 	margin-left: auto;
-	text-align: right;
-	width: 270px;
+	text-align: left;
+	width: 100%;
 }
 
 .space-switcher-text {
-	width: 270px;
+	width: 100%;
 }
 
 .new-space-img, .space-switcher-img, .share-space-img {
@@ -109,17 +109,33 @@
 }
 
 
-
 @include breakpoint(desktop){
 	.intro {
 	  font-size: 25px;
 	  line-height: 41px;
+	}
+	.new-space-img, .share-space-img {
+		width: 350px;
+	}
+
+	.space-switcher-img {
+		width: 270px;
+		margin-left: auto;
 	}
 	.flex-container {
 		width: 45%;
 	}
 	.share-space-img {
 		margin-top: -90px;
+	}
+	.share-space-text {
+		margin-left: auto;
+		text-align: right;
+		width: 270px;
+	}
+
+	.space-switcher-text {
+		width: 270px;
 	}
 	.section-intro {
 		p {
@@ -129,6 +145,10 @@
 	}
 	.section-problems {
 		text-align: left;
+	}
+	.section{
+		padding: 70px 0;
+		overflow: hidden;
 	}
 }
 
