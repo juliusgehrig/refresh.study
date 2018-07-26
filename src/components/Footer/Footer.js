@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 const Footer = (props) => (
   <Wrapper>
     <div className="row center-xs">
-      <div className="col-xs-10">
+      <div className="col-lg-10  col-xs-11">
         <div className="box">
           <footer styleName={`container-${props.theme}`}>
             <div styleName="sectionBig">

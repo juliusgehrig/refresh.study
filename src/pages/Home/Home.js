@@ -80,7 +80,7 @@ class Home extends React.Component {
 
 				<Wrapper>
 					<div className="row center-xs">
-						<div className="col-lg-8 col-xs-11">
+						<div className="col-lg-8 col-md-8 col-sm-8 col-xs-10">
 							<p styleName="intro">
 								We spend so much time browsing the web that we hardly even think about the browser as an app. And while the web itself has undergone big changes in the last twenty years, browsers have remained largely the same. Refresh is a concept for a modern web browser based on iOS Safari.
 					</p>
