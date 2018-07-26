@@ -1,3 +1,6 @@
+@import "~styles/variables";
+@import "~styles/typography";
+
 .banner {
   height: 800px;
   width: 100vw;
@@ -49,4 +52,10 @@
 .introtext {
   color: #BDBDBD;
   font-size: 22px;
+}
+
+@include breakpoint(mobileonly){
+  .introtext {
+    font-size: 18px;
+  }
 }

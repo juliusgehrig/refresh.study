@@ -90,9 +90,9 @@ class Home extends React.Component {
 			<section styleName="section-problems">
 				<Wrapper>
 					<div className="row center-xs">
-						<div className="col-lg-11">
+						<div className="col-lg-11 col-xs-11">
 							<h3 styleName="problems-headline">
-								The core problems we focus on are:
+								Core problems we focus on are:
 							</h3>
 						</div>
 						<div className="col-lg-4 col-md-3 col-sm-7 col-xs-11">
