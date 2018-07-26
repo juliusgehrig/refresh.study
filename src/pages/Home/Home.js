@@ -51,7 +51,7 @@ class Home extends React.Component {
 						</div>
 					</div>
 					<div className="row middle-xs center-xs">
-						<div className="col-lg-8 col-sm-11 col-xs-11">
+						<div className="col-lg-8 col-sm-9 col-xs-11">
 							<div styleName="focusControls">
 								<div>
 									<TabControl onSelect={index => { this.setState({ currentFocus: index }) }} items={tabs} />
@@ -76,11 +76,6 @@ class Home extends React.Component {
 		const { currentPreview } = this.state
 		return (<div >
 			<Hero></Hero>
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
 			<section styleName="section">
 
 				<Wrapper>
@@ -216,7 +211,7 @@ Maybe you’re looking for a website you visited a while ago. Or maybe you’re 
 						</div>
 					</div>
 					<div className="row center-xs">
-						<div className="col-lg-8  col-xs-12">
+						<div className="col-lg-8 col-md-8 col-xs-11">
 							<img styleName="search-tags-screen" src="/assets/images/tag-search.png" alt="Tag search" />
 						</div>
 					</div>
