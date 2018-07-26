@@ -15,6 +15,7 @@ import DeviceFrame from 'components/DeviceFrame'
 import GesturesDemo from 'components/GesturesDemo'
 import TabsIcon from 'components/TabsIcon'
 import ContextIcon from 'components/ContextIcon'
+import SaveIcon from 'components/SaveIcon'
 
 
 class Home extends React.Component {
@@ -103,7 +104,9 @@ class Home extends React.Component {
 							<p>Managing a lot of open tabs that span across different tasks should be easier to handle. Browsers should help in sorting open tabs and making sense of past browsing sessions.</p>
 						</div>
 						<div className="col-lg-4  col-xs-10">
-							<img styleName="problem-icon" src="/assets/images/icons/saving-information.svg" alt="Saving and recalling" />
+							<div styleName="problem-icon">
+								<SaveIcon/>
+							</div>
 							<h2>Saving and recalling</h2>
 							<p>Saving information and files for later should be more intuitive. The browser should help categorising saved information and surface it when it could be relevant. </p>
 						</div>

@@ -3,15 +3,18 @@
 }
 
 .tab_active {
-  animation: tab 2s cubic-bezier(.15, .8,.3,1.2) infinite;
+  animation: tab 2s ease-in infinite;
 }
 
 @keyframes tab {
   0%,100% {
     transform: translateX(0px) translateY(-0px);
   }
+  10% {
+    transform: translateX(-1px) translateY(1px);
+  }
   20% {
-    transform: translateX(1px) translateY(-1px);
+    transform: translateX(0px) translateY(-0px);
   }
 }
 
@@ -20,7 +23,7 @@
 }
 
 @keyframes tab_1 {
-  0% {
+  0%,20% {
     transform: translateX(0px) translateY(-0px);
     opacity: 0.4;
   }
@@ -35,7 +38,7 @@
 }
 
 @keyframes tab_2 {
-  0% {
+  0%,20% {
     transform: translateX(0px) translateY(-0px);
   }
   100% {
