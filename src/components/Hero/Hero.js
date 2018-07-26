@@ -1,7 +1,6 @@
 import CSSModules from 'react-css-modules';
 import React from 'react';
 import styles from './Hero.scss'
-import Wrapper from 'components/Wrapper'
 
 
 const Hero = (props) => (
