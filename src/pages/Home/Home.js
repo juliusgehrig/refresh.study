@@ -17,7 +17,6 @@ import TabsIcon from 'components/TabsIcon'
 import ContextIcon from 'components/ContextIcon'
 import SaveIcon from 'components/SaveIcon'
 
-
 class Home extends React.Component {
 	constructor(props) {
 		super(props)
@@ -83,7 +82,7 @@ class Home extends React.Component {
 						<div className="col-lg-8 col-md-8 col-sm-8 col-xs-10">
 							<p styleName="intro">
 								We spend so much time browsing the web that we hardly even think about the browser as an app. And while the web itself has undergone big changes in the last twenty years, browsers have remained largely the same. Refresh is a concept for a modern web browser based on iOS Safari.
-					</p>
+							</p>
 						</div>
 					</div>
 				</Wrapper>
@@ -91,6 +90,11 @@ class Home extends React.Component {
 			<section styleName="section-problems">
 				<Wrapper>
 					<div className="row center-xs">
+						<div className="col-lg-11">
+							<h3 styleName="problems-headline">
+								The core problems we focus on are:
+							</h3>
+						</div>
 						<div className="col-lg-4 col-md-3 col-sm-7 col-xs-11">
 							<div styleName="problem-icon">
 								<TabsIcon/>

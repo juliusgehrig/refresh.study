@@ -108,6 +108,16 @@
 	border-radius: 29px;
 }
 
+.problems-headline {
+	font-weight: 600;
+	font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe;
+	text-align: center;
+	font-size: 17px;
+	margin-bottom: 80px;
+	text-transform: uppercase;
+	letter-spacing: .2px;
+	color: #9EA9B1;
+}
 
 @include breakpoint(desktop){
 	.intro {
