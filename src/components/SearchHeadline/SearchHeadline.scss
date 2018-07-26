@@ -17,4 +17,10 @@
 
 .headline{
 	margin-left:-64px;
+	:global{
+		.Typist{
+			display: inline-block;
+		}
+	}
+
 }

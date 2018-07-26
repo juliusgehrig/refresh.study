@@ -38,8 +38,9 @@ class TabControl extends React.Component {
 		const { currentIndex } = this.state
 		const _this = this
 		return (
+			<div styleName="outer">
 			<div styleName="scroll">
-				<div styleName="container" style={{width:'380px'}}>
+				<div styleName="container" style={{width:`${this.props.width}px`}}>
 					{items.map((item, index) =>
 						<div onClick={() => { this.selectItem(index) }} key={index} ref={c => { _this.items[index] = c }} styleName={`item${index === currentIndex ? '-active' : ''}`}>
 							{item}
@@ -56,12 +57,14 @@ class TabControl extends React.Component {
 
 				</div>
 			</div>
+			</div>
 		);
 	}
 }
 
 TabControl.defaultProps = {
-	onSelect: (index) => { }
+	onSelect: (index) => { },
+	width:380
 }
 
 export default CSSModules(TabControl, styles);

@@ -18,7 +18,7 @@ import ContextIcon from 'components/ContextIcon'
 import SaveIcon from 'components/SaveIcon'
 import ReplayButton from 'components/ReplayButton';
 import { Player, ControlBar } from 'video-react';
-import VisibilitySensor from 'react-visibility-sensor';
+import Waypoint from 'react-waypoint';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -27,33 +27,40 @@ class Home extends React.Component {
 		this.state = {
 			currentPreview: 0,
 			currentFocus: 0,
-			focusEnabled: true,
+			focusEnabled: true
 
 		}
-		this.onChangeSpaceVideoVisibility = this.onChangeSpaceVideoVisibility.bind(this)
-		this.onChangeHistoryVideoVisibility = this.onChangeHistoryVideoVisibility.bind(this)
+		this.onSpaceVideoEnter = this.onSpaceVideoEnter.bind(this)
+		this.onSpaceVideoLeave = this.onSpaceVideoLeave.bind(this)
+
+		this.onHistoryVideoEnter = this.onHistoryVideoEnter.bind(this)
+		this.onHistoryVideoLeave = this.onHistoryVideoLeave.bind(this)
+
 		this.replaySpaces = this.replaySpaces.bind(this)
 		this.replayHistory = this.replayHistory.bind(this)
+		this.renderFocusSwitch = this.renderFocusSwitch.bind(this)
+
 	}
 
 
-	onChangeSpaceVideoVisibility(visible) {
-		if (visible) {
-			this.spacesPlayer.play()
-		} else {
-			this.spacesPlayer.pause()
-		}
+	onSpaceVideoEnter() {
+		this.spacesPlayer.play()
+	}
+
+	onSpaceVideoLeave() {
+		this.spacesPlayer.pause()
 	}
 
 
 
-	onChangeHistoryVideoVisibility(visible) {
-		if (visible) {
-			this.historyPlayer.play()
-		} else {
-			this.historyPlayer.pause()
-		}
+	onHistoryVideoEnter() {
+		this.historyPlayer.play()
 	}
+
+	onHistoryVideoLeave() {
+		this.historyPlayer.pause()
+	}
+
 
 
 
@@ -68,6 +75,19 @@ class Home extends React.Component {
 	}
 
 
+
+	renderFocusSwitch() {
+		const { currentFocus, focusEnabled } = this.state
+		return (
+			<React.Fragment>
+				<div onClick={() => { this.setState({ focusEnabled: false }) }} styleName={`focusToggleLabel${!focusEnabled ? '-enabled' : ''}`}>Default</div>
+				<div styleName="focusToggleSwitch">
+					<Toggle enabled={focusEnabled} onSwitch={enabled => { this.setState({ focusEnabled: enabled }) }} />
+				</div>
+				<div onClick={() => { this.setState({ focusEnabled: true }) }} styleName={`focusToggleLabel${focusEnabled ? '-enabled' : ''}`}>Focus</div>
+			</React.Fragment>
+		)
+	}
 	renderFocus() {
 		const { currentFocus, focusEnabled } = this.state
 		const tabs = [
@@ -92,17 +112,19 @@ class Home extends React.Component {
 						<div className="col-lg-8 col-sm-9 col-xs-11">
 							<div styleName="focusControls">
 								<div>
-									<TabControl onSelect={index => { this.setState({ currentFocus: index }) }} items={tabs} />
+									<TabControl width={371} onSelect={index => { this.setState({ currentFocus: index }) }} items={tabs} />
 								</div>
 								<div styleName="focusToggle">
-									<div onClick={() => { this.setState({ focusEnabled: false }) }} styleName={`focusToggleLabel${!focusEnabled ? '-enabled' : ''}`}>Default</div>
-									<div styleName="focusToggleSwitch">
-										<Toggle enabled={focusEnabled} onSwitch={enabled => { this.setState({ focusEnabled: enabled }) }} />
-									</div>
-									<div onClick={() => { this.setState({ focusEnabled: true }) }} styleName={`focusToggleLabel${focusEnabled ? '-enabled' : ''}`}>Focus</div>
+									{this.renderFocusSwitch()}
 								</div>
 							</div>
 							<Focus enabled={focusEnabled} current={currentFocus} />
+							<div styleName="focusToggleContainer-mobile">
+								<div styleName="focusToggle-mobile">
+									{this.renderFocusSwitch()}
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</Wrapper>
@@ -169,19 +191,21 @@ class Home extends React.Component {
 									A Space is a collection of open tabs and pages you saved for later centered around a topic or a part of your life. Bookmarks, favorites, and the reading list are reduced to one simple way to save pages for later. Saved pages are connected to each Space and are previewed visually below your open tabs. They are automatically grouped by categories with the option to create your own groups if you want to.
 								</p>
 								<DeviceFrame>
-									<VisibilitySensor minTopValue={200} partialVisibility={true} delayedCall={true} onChange={this.onChangeSpaceVideoVisibility} >
+									<Waypoint bottomOffset={'20%'} onEnter={this.onSpaceVideoEnter} onLeave={this.onSpaceVideoLeave}>
+										<div>
+											<Player
+												ref={c => { this.spacesPlayer = c }}
+												style={{ width: '100%' }}
+												playsInline
+												controls={false}
+												muted={true}
+												src="/assets/videos/spaces-device.mp4"
+											>
+												<ControlBar disableCompletely={true}></ControlBar>
+											</Player>
+										</div>
 
-										<Player
-											ref={c => { this.spacesPlayer = c }}
-											style={{ width: '100%' }}
-											playsInline
-											controls={false}
-											muted={true}
-											src="/assets/videos/spaces-device.mp4"
-										>
-											<ControlBar disableCompletely={true}></ControlBar>
-										</Player>
-									</VisibilitySensor>
+									</Waypoint>
 								</DeviceFrame>
 								<center>
 									<ReplayButton onClick={this.replaySpaces} />
@@ -190,39 +214,34 @@ class Home extends React.Component {
 							</div>
 						</div>
 					</div>
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<div className="row middle-xs center-xs">
-						<div className="col-lg-4 col-md-4 col-sm-4 col-xs-11">
-							<SpacesHeadline></SpacesHeadline>
-							<p>Create a space for work, one for research of your thesis, and one for that Thailand trip you’ve been planning. Every time you switch between Spaces all open tabs and saved links are still there, but they won’t disturb you when you want to focus on something different.</p>
+
+					<div styleName="spaces-info">
+						<div className="row middle-xs center-xs">
+							<div className="col-lg-4 col-md-4 col-sm-4 col-xs-11">
+								<SpacesHeadline></SpacesHeadline>
+								<p>Create a space for work, one for research of your thesis, and one for that Thailand trip you’ve been planning. Every time you switch between Spaces all open tabs and saved links are still there, but they won’t disturb you when you want to focus on something different.</p>
+							</div>
+							<div className="col-lg-4 col-md-4 col-sm-5 col-xs-11">
+								<img alt="Create New Space" styleName="new-space-img" src="/assets/images/newspace.png" />
+							</div>
 						</div>
-						<div className="col-lg-4 col-md-4 col-sm-5 col-xs-11">
-							<img alt="Create New Space" styleName="new-space-img" src="/assets/images/newspace.png"/>
-						</div>
-					</div>
-					<div className="row middle-xs center-xs">
-						<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
-							<br/>
-							<img alt="Space Switcher" styleName="space-switcher-img" src="/assets/images/switcher.png"/>
-						</div>
-						<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
-							<br/>
-							<p styleName="space-switcher-text">Quickly switch between Spaces using the Space Switcher. It can be accessed from the tab overview or the address bar.</p>
-						</div>
-						<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
-							<br/>
-							<p styleName="share-space-text">Share a space with one or more friends to collaborate on it. All saved sites are kept in sync between the collaborators.</p>
-						</div>
-						<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
-							<br/>
-							<img alt="Space Switcher" styleName="share-space-img" src="/assets/images/share_space.png"/>
+						<div className="row middle-xs center-xs">
+							<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
+								<br />
+								<img alt="Space Switcher" styleName="space-switcher-img" src="/assets/images/switcher.png" />
+							</div>
+							<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
+								<br />
+								<p styleName="space-switcher-text">Quickly switch between Spaces using the Space Switcher. It can be accessed from the tab overview or the address bar.</p>
+							</div>
+							<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
+								<br />
+								<p styleName="share-space-text">Share a space with one or more friends to collaborate on it. All saved sites are kept in sync between the collaborators.</p>
+							</div>
+							<div className="col-lg-6 col-md-5 col-sm-5 col-xs-11">
+								<br />
+								<img alt="Space Switcher" styleName="share-space-img" src="/assets/images/share_space.png" />
+							</div>
 						</div>
 					</div>
 					<div styleName="section-previews">
@@ -230,11 +249,11 @@ class Home extends React.Component {
 							<div className="col-lg-6 col-md-6 col-xs-11">
 								<h2>Smart link previews</h2>
 								<p>Saved links are automatically categorised by type and content when they’re added to a Space. A preview is generated based on the content type of the link that displays contextual information.</p>
-								<TabControl onSelect={index => { this.setState({ currentPreview: index }) }} items={['Shopping', 'Articles', 'Video & Music', 'Events']} />
+								<TabControl width={475} onSelect={index => { this.setState({ currentPreview: index }) }} items={['Shopping', 'Articles', 'Video & Music', 'Events']} />
 							</div>
 							<div className="col-lg-5 col-md-5 col-xs-11">
-								<br/>
-								<br/>
+								<br />
+								<br />
 								<Previews current={currentPreview} ></Previews>
 							</div>
 						</div>
@@ -253,19 +272,20 @@ class Home extends React.Component {
 					</p>
 
 								<DeviceFrame>
-									<VisibilitySensor minTopValue={200} partialVisibility={true} delayedCall={true} onChange={this.onChangeHistoryVideoVisibility} >
-
-										<Player
-											ref={c => { this.historyPlayer = c }}
-											style={{ width: '100%' }}
-											playsInline
-											controls={false}
-											muted={true}
-											src="/assets/videos/history-device.mp4"
-										>
-											<ControlBar disableCompletely={true}></ControlBar>
-										</Player>
-									</VisibilitySensor>
+									<Waypoint bottomOffset={'20%'} onEnter={this.onHistoryVideoEnter} onLeave={this.onHistoryVideoLeave} topOffset={200}>
+										<div>
+											<Player
+												ref={c => { this.historyPlayer = c }}
+												style={{ width: '100%' }}
+												playsInline
+												controls={false}
+												muted={true}
+												src="/assets/videos/history-device.mp4"
+											>
+												<ControlBar disableCompletely={true}></ControlBar>
+											</Player>
+										</div>
+									</Waypoint>
 								</DeviceFrame>
 								<center>
 									<ReplayButton onClick={this.replayHistory} />
@@ -292,7 +312,7 @@ class Home extends React.Component {
 				</Wrapper>
 			</section>
 			{this.renderFocus()}
-			<section styleName="section-search">
+			<section styleName="section-navigation">
 				<Wrapper>
 					<div className="row center-xs">
 						<div className="col-lg-5 col-md-6 col-xs-11">
@@ -302,7 +322,7 @@ class Home extends React.Component {
 					</div>
 					<div className="row center-xs">
 						<div className="col-lg-10  col-xs-11">
-							<GesturesDemo/>
+							<GesturesDemo />
 						</div>
 					</div>
 				</Wrapper>

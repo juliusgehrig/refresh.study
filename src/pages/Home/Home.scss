@@ -19,7 +19,7 @@
 }
 
 .section{
-	padding: 30px 0;
+	padding: 50px 0;
 	overflow: hidden;
 }
 
@@ -28,7 +28,16 @@
 	text-align: center;
 }
 
+.spaces-info{
+	margin-top: 200px;
+}
+
 .section-search{
+	composes:section;
+	text-align: center;
+}
+
+.section-navigation{
 	composes:section;
 	text-align: center;
 }
@@ -38,7 +47,7 @@
 }
 
 .section-previews{
-	margin-top: 70px;
+	margin-top: 150px;
 }
 
 .section-intro {
@@ -56,14 +65,14 @@
 }
 
 .focusControls{
-	display:flex;
+	display:block;
 	justify-content: space-between;
 	margin-bottom: 40px;
 }
 
 .focusToggle{
-	display:flex;
 	align-items: center;
+	display:none;
 }
 
 .focusToggleLabel{
@@ -166,6 +175,18 @@
 	}
 }
 
+.focusToggleContainer-mobile{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.focusToggle-mobile{
+	composes:focusToggle;
+	display:flex;
+	margin-top:40px;
+}
+
 
 
 @include breakpoint(tablet){
@@ -174,6 +195,18 @@
 			margin-bottom: 60px;
 		}
 	}
+	.section{
+		padding:100px 0;
+	}
+	.focusToggle{
+		display:flex;
+	}
+	.focusToggle-mobile{
+		display:none;
+	}
+	.focusControls{
+		display: flex;
+	}
 }
 
   @include breakpoint(mobileonly){
@@ -181,6 +214,7 @@
 		width: 100%;
 		max-width: none;
 	}
+	
 	.problem-icon {
 		margin: 0 auto;
 		margin-bottom: 30px;

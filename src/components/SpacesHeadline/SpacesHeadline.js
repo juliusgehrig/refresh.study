@@ -2,7 +2,7 @@ import CSSModules from 'react-css-modules';
 import React from 'react';
 import styles from './SpacesHeadline.scss'
 import { Spring } from 'react-spring'
-import VisibilitySensor from 'react-visibility-sensor';
+import Waypoint from 'react-waypoint';
 
 
 class SpacesHeadline extends React.Component {
@@ -37,8 +37,8 @@ class SpacesHeadline extends React.Component {
 		this.onChangeVisibility = this.onChangeVisibility.bind(this)
 	}
 
-	onChangeVisibility(visible) {
-		if (!this.state.visible && visible) {
+	onChangeVisibility() {
+		if (!this.state.visible) {
 			this.setState({
 				visible: true
 			})
@@ -49,7 +49,11 @@ class SpacesHeadline extends React.Component {
 
 	startAnimation() {
 		let progress = 0
+		progress++;
 
+		this.setState({
+			progress: progress
+		})
 		const interval = setInterval(() => {
 			progress++;
 
@@ -66,7 +70,7 @@ class SpacesHeadline extends React.Component {
 		const { progress } = this.state;
 		const previous = progress === 0 ? 0 : progress - 1
 		return (
-			<VisibilitySensor delayedCall={true} onChange={this.onChangeVisibility} >
+			<Waypoint onEnter={this.onChangeVisibility}>
 				<h2 styleName="container">
 					<div>A Space for </div>
 					<div styleName="slider-container">
@@ -86,7 +90,7 @@ class SpacesHeadline extends React.Component {
 						</div>
 					</div>
 				</h2>
-			</VisibilitySensor>
+			</Waypoint>
 		);
 	}
 }

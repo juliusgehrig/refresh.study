@@ -2,7 +2,8 @@ import CSSModules from 'react-css-modules';
 import React from 'react';
 import styles from './SearchHeadline.scss'
 import { Spring } from 'react-spring'
-import VisibilitySensor from 'react-visibility-sensor';
+import Waypoint  from 'react-waypoint';
+import Typist from 'react-typist';
 
 
 
@@ -18,6 +19,7 @@ class SearchHeadline extends React.Component {
 		}
 
 		this.onChangeVisibility = this.onChangeVisibility.bind(this)
+		this.typingDone = this.typingDone.bind(this)
 
 	}
 
@@ -28,40 +30,38 @@ class SearchHeadline extends React.Component {
 			</div>
 		)
 	}
-
+	
 	type() {
-		const time = 50
-		setTimeout(() => {
-			if (this.state.written.length < this.text.length) {
-				this.setState({
-					written: this.text.slice(0, this.state.written.length + 1)
-				},()=>{
-					this.type()
-
+		for(let i = 0; i<=this.text.length;i++){
+			setTimeout(()=>{
+				 this.setState({
+					written: this.text.slice(0, i)
 				})
-
-			}
-		}, time)
+			},(i+1)*50)
+		}
 	}
 
-	onChangeVisibility(visible) {
-		if (!this.state.visible && visible) {
+	typingDone(){
+		this.setState({
+			done:true
+		})
+	}
+
+	onChangeVisibility() {
+		if (!this.state.visible) {
 			this.setState({
 				visible: true
 			})
-
-			this.type()
 		}
-
 	}
 
 
 	render() {
 		return (
-			<React.Fragment>
-				<VisibilitySensor delayedCall={true} onChange={this.onChangeVisibility}/>
-				<h2 styleName="headline">{this.state.written.length === 0 ? <div style={{ opacity: 0 }}>a</div> : null}{this.state.written}</h2>
-			</React.Fragment>
+			<Waypoint onEnter={this.onChangeVisibility}>
+				<h2 styleName="headline">{this.state.visible  ? <Typist cursor={{show:false}} onTypingDone={this.typingDone}>Find it with a &nbsp; </Typist> :  <div style={{ opacity: 0 }}>a</div>} {this.state.done && this.getTag()}</h2>
+			{/*	<h2 styleName="headline">{this.state.written.length === 0 ? <div style={{ opacity: 0 }}>a</div> : null}{this.state.written}</h2>*/}
+			</Waypoint>
 		);
 	}
 }

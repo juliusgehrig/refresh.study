@@ -1,7 +1,7 @@
 import CSSModules from 'react-css-modules';
 import React from 'react';
 import styles from './FocusHeadline.scss'
-import VisibilitySensor from 'react-visibility-sensor';
+import Waypoint  from 'react-waypoint';
 
 
 
@@ -14,8 +14,8 @@ class FocusHeadline extends React.Component {
 		this.onChangeVisibility = this.onChangeVisibility.bind(this)
 	}
 
-	onChangeVisibility(visible) {
-		if (!this.state.visible && visible) {
+	onChangeVisibility() {
+		if (!this.state.visible) {
 			this.setState({
 				visible: true
 			})
@@ -25,9 +25,9 @@ class FocusHeadline extends React.Component {
 	render() {
 		const { visible } = this.state
 		return (
-			<VisibilitySensor delayedCall={true} onChange={this.onChangeVisibility} >
+			<Waypoint onEnter={this.onChangeVisibility} >
 				<h1 styleName="section-headline" >Focus on whats <span styleName={`headline${visible ? '-focus' : ''}`}>important</span></h1>
-			</VisibilitySensor>
+			</Waypoint>
 		);
 	}
 }

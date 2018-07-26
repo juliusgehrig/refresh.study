@@ -1,9 +1,21 @@
+@import "~styles/variables";
+
+
+.outer{
+	position: relative;
+
+}
 .container{
 	display: flex;
 	position: relative;
 }
 
-.scroll{overflow: auto;}
+.scroll{
+	overflow: auto;
+}
+.scroll::-webkit-scrollbar { 
+    display: none; 
+}
 .item{
 	padding: 6px 20px;	
 	font-weight: 500;
@@ -42,3 +54,41 @@
 	
 }
 
+.outer:before{
+	display: block;
+	content:'';
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right: 0;
+	width: 20px;
+	background-image: linear-gradient(90deg, rgba(237,238,243,0.00) 0%, #EDEEF3 100%);
+	z-index: 99;
+
+}
+
+
+
+
+@include breakpoint(tablet){
+	.section-problems {
+		p {
+			margin-bottom: 60px;
+		}
+	}
+	.focusToggle{
+		display:flex;
+	}
+	.focusToggle-mobile{
+		display:none;
+	}
+	.focusControls{
+		display: flex;
+	}
+
+	.outer:before{
+		display:none;
+
+	}
+
+}
