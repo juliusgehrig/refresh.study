@@ -6,7 +6,7 @@ import Wrapper from 'components/Wrapper'
 
 const Hero = (props) => (
 	<div styleName="banner">
-		<video preload="metadata" playsInline loop muted autoPlay poster="/assets/images/video-cover.png">
+		<video preload="metadata" playsInline loop muted  poster="/assets/images/video-cover.png">
   		<source src="/assets/videos/placeholder/test3.mp4" type="video/mp4"/>
 			Your browser does not support the video tag.
 		</video>

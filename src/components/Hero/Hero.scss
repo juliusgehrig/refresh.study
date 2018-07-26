@@ -34,11 +34,10 @@
     border-radius: 6px;
     padding: 10px 16px;
     cursor: pointer;
-    transition: .3s cubic-bezier(.15, .8,.3,1.8);
+    transition: .3s linear;
     &:hover {
       background: white;
       color: black;
-      transform: scale(1.05);
     }
   }
 }

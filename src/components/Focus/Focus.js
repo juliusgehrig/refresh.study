@@ -19,7 +19,7 @@ class Focus extends React.Component {
 			default: '/assets/images/placeholder/reader-focus-off.png',
 			focus: '/assets/images/placeholder/reader-focus.png'
 		}, {
-			default: '/assets/images/placeholder/reader-focus-off.png',
+			default: '/assets/images/placeholder/form-focus-off.png',
 			focus: '/assets/images/placeholder/form-focus.png'
 		}]
 
