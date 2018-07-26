@@ -140,34 +140,26 @@ class Home extends React.Component {
 				<br/>
 				<br/>
 					<div className="row middle-xs center-xs">
-						<div className="col-lg-4 col-md-4 col-xs-11">
+						<div className="col-lg-4 col-md-4 col-sm-4 col-xs-11">
 							<SpacesHeadline></SpacesHeadline>
 							<p>Create a space for work, one for research of your thesis, and one for that Thailand trip you’ve been planning. Every time you switch between Spaces all open tabs and saved links are still there, but they won’t disturb you when you want to focus on something different.</p>
 						</div>
-						<div className="col-lg-4 col-md-4 col-sm-7 col-xs-11">
+						<div className="col-lg-4 col-md-4 col-sm-5 col-xs-11">
 							<img alt="Create New Space" styleName="new-space-img" src="/assets/images/newspace.png"/>
 						</div>
 					</div>
 					<div className="row middle-xs center-xs">
-						<div className="col-lg-8  col-xs-11">
-							<div styleName="flex-wrapper">
-								<div styleName="flex-container">
-									<img alt="Space Switcher" styleName="space-switcher-img" src="/assets/images/switcher.png"/>
-								</div>
-								<div styleName="flex-container">
-									<p>Quickly switch between Spaces using the Space Switcher. It can be accessed from the tab overview or the address bar.</p>
-								</div>
-							</div>
+						<div className="col-lg-6 col-md-6 col-sm-6 col-xs-11">
+							<img alt="Space Switcher" styleName="space-switcher-img" src="/assets/images/switcher.png"/>
 						</div>
-						<div className="col-lg-8  col-xs-11">
-							<div styleName="flex-wrapper">
-								<div styleName="flex-container">
-									<p styleName="share-space-text">Share a space with one or more friends to collaborate on it. All saved sites are kept in sync between the collaborators.</p>
-								</div>
-								<div styleName="flex-container">
-									<img alt="Space Switcher" styleName="share-space-img" src="/assets/images/share_space.png"/>
-								</div>
-							</div>
+						<div className="col-lg-6 col-md-6 col-sm-6 col-xs-11">
+							<p styleName="space-switcher-text">Quickly switch between Spaces using the Space Switcher. It can be accessed from the tab overview or the address bar.</p>
+						</div>
+						<div className="col-lg-6 col-md-6 col-sm-6 col-xs-11">
+							<p styleName="share-space-text">Share a space with one or more friends to collaborate on it. All saved sites are kept in sync between the collaborators.</p>
+						</div>
+						<div className="col-lg-6 col-md-6 col-sm-6 col-xs-11">
+							<img alt="Space Switcher" styleName="share-space-img" src="/assets/images/share_space.png"/>
 						</div>
 					</div>
 					<div styleName="section-previews">

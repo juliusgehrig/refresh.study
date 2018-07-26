@@ -90,25 +90,14 @@
 	border-radius: 14px;
 }
 
-.flex-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-  justify-content: space-between;
-	margin: 40px 0;
-}
-
-.flex-container {
-	width: 100%;
-	margin: 0;
-	p {
-		width: 100%;
-		text-align: center;
-	}
-}
-
 .share-space-text {
 	margin-left: auto;
 	text-align: right;
+	width: 270px;
+}
+
+.space-switcher-text {
+	width: 270px;
 }
 
 .new-space-img, .space-switcher-img, .share-space-img {
@@ -130,18 +119,12 @@
 		width: 45%;
 	}
 	.share-space-img {
-		margin-top: -160px;
+		margin-top: -90px;
 	}
 	.section-intro {
 		p {
 			columns: 2;
 			column-gap: 50px;
-		}
-	}
-	.flex-container {
-		p {
-			width: 277px;
-			text-align: left;
 		}
 	}
 	.section-problems {
