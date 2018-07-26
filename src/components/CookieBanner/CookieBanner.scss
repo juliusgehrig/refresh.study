@@ -1,8 +1,11 @@
+@import "~styles/variables";
+
 .base {
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 50%;
   width: 100vw;
+  transform: translateX(-50%);
   background: rgba(23,24,26,0.8);
   -webkit-backdrop-filter: blur(8px);
   padding: 16px;
@@ -13,22 +16,33 @@
     display: inline-block;
     color: #bdbdbd;
   }
-  .cookiebutton {
-    background-color: rgba(255,255,255,0.15);
-    margin-left: 20px;
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 13px;
-    padding: 4px 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .2s linear;
-    &:hover {
-      background-color: rgba(255,255,255,1);
-      color: black;
-    }
+}
+
+.cookiebutton {
+  background-color: rgba(255,255,255,0.15);
+  margin-left: 20px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s linear;
+  &:hover {
+    background-color: rgba(255,255,255,1);
+    color: black;
+  }
+}
+
+@include breakpoint(mobileonly){
+	.cookiebutton {
+    display: block;
+    width: 100px;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-top: 16px;
   }
 }
