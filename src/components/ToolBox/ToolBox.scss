@@ -34,6 +34,12 @@
   height: 60px;
 }
 
+@include breakpoint(tablet){
+  .box {
+    width: 28%;
+  }
+}
+
 @include breakpoint(desktop){
   .box {
     width: 28%;

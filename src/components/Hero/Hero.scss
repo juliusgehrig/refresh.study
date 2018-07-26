@@ -1,3 +1,6 @@
+@import "~styles/variables";
+@import "~styles/typography";
+
 .banner {
   height: 800px;
   width: 100vw;
@@ -34,7 +37,7 @@
     border-radius: 6px;
     padding: 10px 16px;
     cursor: pointer;
-    transition: .3s linear;
+    transition: .2s linear;
     &:hover {
       background: white;
       color: black;
@@ -49,4 +52,10 @@
 .introtext {
   color: #BDBDBD;
   font-size: 22px;
+}
+
+@include breakpoint(mobileonly){
+  .introtext {
+    font-size: 18px;
+  }
 }

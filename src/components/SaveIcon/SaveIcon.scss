@@ -5,15 +5,15 @@
 .bookmark_1 {
   transform: translateY(-4px);
   opacity: 0;
-  animation: popIn 2.4s cubic-bezier(.15,.8,.3,1.2) infinite;
+  animation: dropIn 2.4s cubic-bezier(.15,.8,.3,1.2) infinite;
 }
 
-@keyframes popIn {
+@keyframes dropIn {
   0% {
     transform: translateY(-4px);;
     opacity: 0;
   }
-  32%,100% {
+  16%,100% {
     transform: translateY(0px);;
     opacity: 1;
   }
