@@ -6,6 +6,7 @@ import Wrapper from 'components/Wrapper'
 import ToolBox from 'components/ToolBox'
 import RevealText from 'components/RevealText'
 import Footer from 'components/Footer'
+import CookieBanner from 'components/CookieBanner'
 
 const Process = (props) => (
   <div styleName="container">
@@ -85,6 +86,7 @@ const Process = (props) => (
         </div>
       </div>
     </div>
+    <CookieBanner/>
     </Wrapper>
     <Footer theme="light"></Footer>
   </div>

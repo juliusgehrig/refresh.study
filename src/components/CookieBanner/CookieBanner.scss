@@ -1,0 +1,29 @@
+.base {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: rgba(23,24,26,0.8);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 16px;
+  text-align: center;
+  p {
+    font-size: 16px;
+    margin-bottom: 0px;
+    display: inline-block;
+    color: white;
+  }
+  .cookiebutton {
+    background-color: white;
+    margin-left: 20px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
