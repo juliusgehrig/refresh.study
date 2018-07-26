@@ -4,7 +4,7 @@
     <title>preview-event</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="0" y="0" width="231" height="130" rx="5"></rect>
+        <rect id="path-1" x="0" y="0" width="231" height="130" rx="6"></rect>
         <pattern id="pattern-2" patternUnits="objectBoundingBox" x="-2.19589571%" width="102.195896%" height="100%">
             <use xlink:href="#image-3" transform="scale(0.496183206,0.496183206)"></use>
         </pattern>
