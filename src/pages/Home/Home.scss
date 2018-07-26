@@ -148,6 +148,15 @@
 }
 
 
+
+@include breakpoint(tablet){
+	.section-problems {
+		p {
+			margin-bottom: 60px;
+		}
+	}
+}
+
   @include breakpoint(mobileonly){
 	.search-tags-screen{
 		width: 100%;
