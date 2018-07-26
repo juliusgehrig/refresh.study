@@ -16,6 +16,9 @@ import GesturesDemo from 'components/GesturesDemo'
 import TabsIcon from 'components/TabsIcon'
 import ContextIcon from 'components/ContextIcon'
 import SaveIcon from 'components/SaveIcon'
+import ReplayButton from 'components/ReplayButton';
+import { Player, ControlBar } from 'video-react';
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 class Home extends React.Component {
@@ -25,8 +28,44 @@ class Home extends React.Component {
 		this.state = {
 			currentPreview: 0,
 			currentFocus: 0,
-			focusEnabled: true
+			focusEnabled: true,
+
 		}
+		this.onChangeSpaceVideoVisibility = this.onChangeSpaceVideoVisibility.bind(this)
+		this.onChangeHistoryVideoVisibility = this.onChangeHistoryVideoVisibility.bind(this)
+		this.replaySpaces = this.replaySpaces.bind(this)
+		this.replayHistory = this.replayHistory.bind(this)
+	}
+
+
+	onChangeSpaceVideoVisibility(visible) {
+		if (visible) {
+			this.spacesPlayer.play()
+		} else {
+			this.spacesPlayer.pause()
+		}
+	}
+
+
+
+	onChangeHistoryVideoVisibility(visible) {
+		if (visible) {
+			this.historyPlayer.play()
+		} else {
+			this.historyPlayer.pause()
+		}
+	}
+
+
+
+	replaySpaces() {
+		this.spacesPlayer.seek(0)
+		this.spacesPlayer.play()
+	}
+
+	replayHistory() {
+		this.historyPlayer.seek(0)
+		this.historyPlayer.play()
 	}
 
 
@@ -98,21 +137,21 @@ class Home extends React.Component {
 					<div className="row center-xs">
 						<div className="col-lg-4 col-xs-10">
 							<div styleName="problem-icon">
-								<TabsIcon/>
+								<TabsIcon />
 							</div>
 							<h2>Tab management</h2>
 							<p>Managing a lot of open tabs that span across different tasks should be easier to handle. Browsers should help in sorting open tabs and making sense of past browsing sessions.</p>
 						</div>
 						<div className="col-lg-4  col-xs-10">
 							<div styleName="problem-icon">
-								<SaveIcon/>
+								<SaveIcon />
 							</div>
 							<h2>Saving and recalling</h2>
 							<p>Saving information and files for later should be more intuitive. The browser should help categorising saved information and surface it when it could be relevant. </p>
 						</div>
 						<div className="col-lg-4  col-xs-10">
 							<div styleName="problem-icon">
-								<ContextIcon/>
+								<ContextIcon />
 							</div>
 							<h2>Context sensitivity</h2>
 							<p>Browsers should be more proactive in suggesting useful actions depending the different types of websites that you’re visiting. </p>
@@ -131,33 +170,49 @@ class Home extends React.Component {
 									A Space is a collection of open tabs and pages you saved for later centered around a topic or a part of your life. Bookmarks, favorites, and the reading list are reduced to one simple way to save pages for later. Saved pages are connected to each Space and are previewed visually below your open tabs. They are automatically grouped by categories with the option to create your own groups if you want to.
 								</p>
 								<DeviceFrame>
-									<img alt="Space Overview" src="/assets/images/Space Overview.png"/>
+									<VisibilitySensor minTopValue={200} partialVisibility={true} delayedCall={true} onChange={this.onChangeSpaceVideoVisibility} >
+
+										<Player
+											ref={c => { this.spacesPlayer = c }}
+											style={{ width: '100%' }}
+											playsInline
+											controls={false}
+											muted={true}
+											src="/assets/videos/spaces-device.mp4"
+										>
+											<ControlBar disableCompletely={true}></ControlBar>
+										</Player>
+									</VisibilitySensor>
 								</DeviceFrame>
+								<center>
+									<ReplayButton onClick={this.replaySpaces} />
+								</center>
+
 							</div>
 						</div>
 					</div>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 					<div className="row middle-xs center-xs">
 						<div className="col-lg-4  col-xs-10">
 							<SpacesHeadline></SpacesHeadline>
 							<p>Create a space for work, one for research of your thesis, and one for that Thailand trip you’ve been planning. Every time you switch between Spaces all open tabs and saved links are still there, but they won’t disturb you when you want to focus on something different.</p>
 						</div>
 						<div className="col-lg-4  col-xs-10">
-							<img alt="Create New Space" styleName="new-space-img" src="/assets/images/newspace.png"/>
+							<img alt="Create New Space" styleName="new-space-img" src="/assets/images/newspace.png" />
 						</div>
 					</div>
 					<div className="row middle-xs center-xs">
 						<div className="col-lg-8  col-xs-10">
 							<div styleName="flex-wrapper">
 								<div styleName="flex-container">
-									<img alt="Space Switcher" styleName="space-switcher-img" src="/assets/images/switcher.png"/>
+									<img alt="Space Switcher" styleName="space-switcher-img" src="/assets/images/switcher.png" />
 								</div>
 								<div styleName="flex-container">
 									<p>Quickly switch between Spaces using the Space Switcher. It can be accessed from the tab overview or the address bar.</p>
@@ -170,7 +225,7 @@ class Home extends React.Component {
 									<p styleName="share-space-text">Share a space with one or more friends to collaborate on it. All saved sites are kept in sync between the collaborators.</p>
 								</div>
 								<div styleName="flex-container">
-									<img alt="Space Switcher" styleName="share-space-img" src="/assets/images/share_space.png"/>
+									<img alt="Space Switcher" styleName="share-space-img" src="/assets/images/share_space.png" />
 								</div>
 							</div>
 						</div>
@@ -194,14 +249,31 @@ class Home extends React.Component {
 					<div className="row middle-xs center-xs">
 						<div className="col-lg-10  col-xs-10">
 							<div styleName="section-intro">
-							<h1 styleName="section-headline">Browsing History</h1>
-							<p>Finding pages you have visited a while ago can get tricky if you can’t remember the exact page title or URL. And the browsing history in most browsers is nothing more than a list of links without context or information on the relations between them.
-Maybe you’re looking for a website you visited a while ago. Or maybe you’re just wondering how exactly you landed on the page you’re on right now.
-								 Refresh lets you look at your browsing history in a new way and easily find pages you visited in the past. Get a better overview over your browsing activity, see the flow from page to page, and easily restore sessions using time travel.
+								<h1 styleName="section-headline">Browsing History</h1>
+								<p>Finding pages you have visited a while ago can get tricky if you can’t remember the exact page title or URL. And the browsing history in most browsers is nothing more than a list of links without context or information on the relations between them.
+	Maybe you’re looking for a website you visited a while ago. Or maybe you’re just wondering how exactly you landed on the page you’re on right now.
+									 Refresh lets you look at your browsing history in a new way and easily find pages you visited in the past. Get a better overview over your browsing activity, see the flow from page to page, and easily restore sessions using time travel.
 					</p>
-							<DeviceFrame>
-									<img alt="History timeline" src="/assets/images/History-timeline.png"/>
+
+								<DeviceFrame>
+									<VisibilitySensor minTopValue={200} partialVisibility={true} delayedCall={true} onChange={this.onChangeHistoryVideoVisibility} >
+
+										<Player
+											ref={c => { this.historyPlayer = c }}
+											style={{ width: '100%' }}
+											playsInline
+											controls={false}
+											muted={true}
+											src="/assets/videos/history-device.mp4"
+										>
+											<ControlBar disableCompletely={true}></ControlBar>
+										</Player>
+									</VisibilitySensor>
 								</DeviceFrame>
+								<center>
+									<ReplayButton onClick={this.replayHistory} />
+								</center>
+
 							</div>
 						</div>
 					</div>
@@ -233,7 +305,7 @@ Maybe you’re looking for a website you visited a while ago. Or maybe you’re 
 					</div>
 					<div className="row center-xs">
 						<div className="col-lg-10  col-xs-10">
-							<GesturesDemo/>
+							<GesturesDemo />
 						</div>
 					</div>
 				</Wrapper>

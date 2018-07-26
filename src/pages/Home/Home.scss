@@ -1,6 +1,10 @@
 @import "~styles/variables";
 @import "~styles/typography";
-
+:global{
+	.video-react-big-play-button{
+		display:none !important;
+	}
+}
 .intro{
 	font-weight: 500;
 	text-align: center;
@@ -146,6 +150,7 @@
 		text-align: left;
 	}
 }
+
 
 
   @include breakpoint(mobileonly){

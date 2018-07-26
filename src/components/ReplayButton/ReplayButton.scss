@@ -1,0 +1,31 @@
+@import "~styles/variables";
+
+.container{
+	display: inline-block;
+}
+.button{
+	color: #525252;
+	opacity: .9;
+	cursor:pointer;
+	display: flex;
+	align-items: center;
+
+	line-height: 1;
+	margin: 0 auto;
+	padding: 5px 10px;
+	border-radius: 6px;
+	transition: all .2s ease-out;
+	
+	&:hover{
+		background-color:rgba(black, .08);
+		transform: scale(1.05);
+		opacity: 1;
+		
+	}
+}
+.button{
+	img{
+		display: inline-block; 
+		margin-right: 8px;
+	}
+}
