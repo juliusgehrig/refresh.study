@@ -1,7 +1,7 @@
 import CSSModules from 'react-css-modules';
 import React from 'react';
 import styles from './Previews.scss'
-import { Spring,animated, interpolate } from 'react-spring'
+import { Spring,animated, interpolate, config } from 'react-spring'
 
 
 
@@ -41,7 +41,7 @@ class Previews extends React.Component {
 			<div onClick={this.changeIndex} styleName='container'>
 				{this.items.map((item, index) =>
 					<div key={index}  >
-						<Spring native config={{tension:40 }} to={{  y: (5*index - currentIndex), scale: 1 - (0.05 *(index - currentIndex)),  opacity: index - currentIndex < 0 ? 0 : 1 - (0.3 * (index - currentIndex)) }}>
+						<Spring native config={config.slow} to={{  y: (5*index - currentIndex), scale: 1 - (0.05 *(index - currentIndex)),  opacity: index - currentIndex < 0 ? 0 : 1 - (0.3 * (index - currentIndex)) }}>
 							{({opacity,y,scale}) =>
 								<animated.div style={{
 									opacity: opacity,

@@ -59,7 +59,7 @@ class SpacesHeadline extends React.Component {
 			if (progress === this.items.length - 1) {
 				clearInterval(interval)
 			}
-		}, 500)
+		}, 800)
 	}
 
 	render() {

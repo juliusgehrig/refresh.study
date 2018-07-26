@@ -1,15 +1,16 @@
 
 .container{
-	perspective: 1300px;
 	padding-top:75%;
+	position:relative;
 
 }
 
 .itemContainer{
-	perspective: 1300px;
+	perspective: 1500px;
 	position: absolute;
 	left:0;
 	top:0;
+	height: 100%;
 	width:100%;
 
 }
