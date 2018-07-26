@@ -19,10 +19,10 @@
 }
 
 .cookiebutton {
-  background-color: rgba(255,255,255,0.15);
+  background-color: rgba(255,255,255,1);
   margin-left: 20px;
   display: inline-block;
-  color: white;
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -32,8 +32,8 @@
   cursor: pointer;
   transition: all .2s linear;
   &:hover {
-    background-color: rgba(255,255,255,1);
-    color: black;
+    background-color: rgba(255,255,255,0.15);
+    color: white;
   }
 }
 
@@ -41,8 +41,10 @@
 	.cookiebutton {
     display: block;
     width: 100px;
-    line-height: 40px;
+    line-height: 32px;
     margin: 0 auto;
     margin-top: 16px;
+    font-size: 18px;
+    border-radius: 10px;
   }
 }
