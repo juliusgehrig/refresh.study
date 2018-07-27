@@ -84,3 +84,12 @@
 		box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15), 0 100px 80px -60px rgba(0,0,0,0.57);
 	}
 }
+
+
+
+@include breakpoint(mobileonly){
+	.container{
+		margin-left:-23%;
+		margin-right:-23%;
+	}
+}

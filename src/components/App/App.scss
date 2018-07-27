@@ -6,7 +6,9 @@ body,html{
   background-color: $body-background;
 }
 
-
+a{
+  text-decoration: none;
+}
 
 img{
   display: block;

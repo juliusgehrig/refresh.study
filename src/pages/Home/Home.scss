@@ -211,7 +211,8 @@
 
   @include breakpoint(mobileonly){
 	.search-tags-screen{
-		width: 100%;
+		width: 180%;
+		margin-top: 30px;
 		max-width: none;
 	}
 	

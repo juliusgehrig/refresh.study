@@ -2,35 +2,31 @@
 @import '~styles/typography';
 
 .headline{
-	color: transparent;
-	text-shadow: 0 0 50px $headline-dark;
-	transition: all 1.5s;
+	filter: blur(30px);
 }
 
 
 .headline-focus{
 	composes:headline;
-	text-shadow: 0 0 0 $headline-dark;
 	animation: focus 1.5s ease-out;
 	animation-fill-mode: forwards;
 }
 
 
-
 @keyframes focus {
 	0%{
-		text-shadow: 0 0 50px $headline-dark;
+		filter: blur(30px);
 	}
 
 	60%{
-		text-shadow: 0 0 20px $headline-dark;
+		filter: blur(10px);
 	}
 
 	65%{
-		text-shadow: 0 0 20px $headline-dark;
+		filter: blur(10px);
 	}
 
 	100%{
-		text-shadow: 0 0 0px $headline-dark;
+		filter: blur(0px);
 	}
 }

@@ -1,5 +1,5 @@
 import CSSModules from 'react-css-modules';
-import React  from 'react';
+import React from 'react';
 import styles from './Linklist.scss'
 
 import Wrapper from 'components/Wrapper'
@@ -10,12 +10,16 @@ import Footer from 'components/Footer'
 const Linklist = (props) => (
   <div styleName="container">
     <Wrapper>
-      <h1 styleName="pageTitle">
-        <RevealText text="Reading List"></RevealText>
-      </h1>
+      <div class="row center-xs">
+        <div class="col-xs-12">
+          <h1 styleName="pageTitle">
+            <RevealText text="Reading List"></RevealText>
+          </h1>
+        </div>
+      </div>
       <h3 styleName="subheadline"><RevealText text="From our research"></RevealText></h3>
       <div class="row center-xs">
-        <div class="col-md-9 col-xs-10">
+        <div class="col-md-9 col-xs-12">
           <div class="box">
             <div styleName="linkWrapper">
               <LinkListLink link="https://www.buzzfeed.com/josephbernstein/meet-the-man-who-invented-tabs" title="Meet The Man Who Invented The Browser Tab" description="Buzzfeed interview with Adam Stiles, the inventor of the browser tab"></LinkListLink>

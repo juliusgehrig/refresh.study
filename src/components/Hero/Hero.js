@@ -29,7 +29,7 @@ class Hero extends Component {
 			<div styleName="banner">
 
 				<video preload="metadata" playsInline autoPlay loop muted  >
-					<source src="/assets/videos/header-background_3.mp4" type="video/mp4" />
+					<source src="/assets/videos/header-background.mp4" type="video/mp4" />
 					Your browser does not support the video tag.
 			</video>
 				<div styleName="banner-box">

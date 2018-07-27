@@ -92,3 +92,10 @@
 	}
 
 }
+
+
+@include breakpoint(mobileonly){
+	.item{
+		padding: 6px 10px;
+	}
+  }

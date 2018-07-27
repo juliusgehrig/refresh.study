@@ -20,7 +20,7 @@ class Header extends React.Component {
 				title: 'Overview'
 			},
 			{
-				path: '/process',
+				path: '/about',
 				title: 'About'
 			}
 		]
@@ -70,7 +70,7 @@ class Header extends React.Component {
 			<div styleName="container">
 				<Wrapper>
 					<div className="row center-xs">
-						<div className="col-lg-10  col-xs-11">
+						<div className="col-lg-10  col-xs-12">
 							<div className="box">
 								<nav styleName="nav">
 									<Link styleName="logoLink" to="/"><h1 styleName="logo">Refresh</h1></Link>

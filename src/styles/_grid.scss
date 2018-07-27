@@ -437,7 +437,8 @@ $half-gutter-width: $flexboxgrid-gutter-width * .5;
   @include flexbox();
   @include flex(0, 1, auto);
   @include flex-direction(row);
-  @include flex-wrap(wrap);
+	@include flex-wrap(wrap);
+	
  
 }
 .row .row{

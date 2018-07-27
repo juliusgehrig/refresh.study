@@ -4,9 +4,11 @@ import CSSModules from 'react-css-modules';
 import { Switch, Route } from 'react-router-dom'
 
 import Home from 'pages/Home'
+import ErrorPage from 'pages/ErrorPage'
 import Process from 'pages/Process'
 import Linklist from 'pages/Linklist'
 import Header from 'components/Header'
+import CookieBanner from 'components/CookieBanner'
 
 class App extends Component {
   render() {
@@ -16,9 +18,12 @@ class App extends Component {
         <Header/>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/process' component={Process} />
-          <Route exact path='/linklist' component={Linklist} />
+          <Route exact path='/about' component={Process} />
+          <Route exact path='/readling-list' component={Linklist} />
+          <Route path='*' exact={true} component={ErrorPage} />
+
         </Switch>
+        <CookieBanner></CookieBanner>
       </div>
     );
   }

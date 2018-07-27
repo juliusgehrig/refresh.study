@@ -36,8 +36,8 @@
 .video-overlay{
   position: relative;
   z-index: 99;
-  width: 70%;
- 
+  width: 90%;
+ max-width: 1000px;
 
 }
 
@@ -89,11 +89,16 @@ border-radius:6px;
 
 .introtext {
   color: #BDBDBD;
-  font-size: 22px;
+  font-size: 18px;
 }
 
-@include breakpoint(mobileonly){
-  .introtext {
-    font-size: 18px;
+
+@include breakpoint(tablet){
+  .video-overlay{
+    width: 70%
   }
+  .introtext {
+    font-size: 22px;
+  }
+
 }
