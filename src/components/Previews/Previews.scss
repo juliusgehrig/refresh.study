@@ -1,6 +1,8 @@
+@import "~styles/variables";
+
 .container{
 	position: relative;
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 	padding-top:58%;
 
@@ -18,3 +20,13 @@
 		width:100%;
 	}
 }
+
+
+@include breakpoint(tablet){
+	.container{
+		width: 80%;
+	
+	}
+  
+  }
+  
