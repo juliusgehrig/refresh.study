@@ -22,7 +22,7 @@ const Footer = (props) => (
             </div>
             <div styleName="sectionBig">
               <h4 styleName="sectionHeader">Press</h4>
-              <p styleName="pressText">If you'd like to write about Refresh feel free to use our <a styleName="textLink" target="blank" href="https://youtu.be/Fcke6xaHzOg">Video</a> or <a styleName="textLink" href="https://www.dropbox.com/s/is3luc5u1q9k1ci/Press.zip?dl=1">Download Our Press Kit</a> for high-res images. {/*For more background knowledge read our <a target="_blank" styleName="textLink" href="/assets/Thesis_Refresh.pdf">Thesis</a>.*/} Feel free to quote this page and please link back to it. We’re also happy to answer any open questions you might have or give you more background information — <a styleName="textLink" href="mailto:hello@refresh.study">Just Email Us</a></p>
+              <p styleName="pressText">If you'd like to write about Refresh feel free to use our <a styleName="textLink" target="blank" href="https://youtu.be/tulrXs47HTw">Video</a> or <a styleName="textLink" href="https://www.dropbox.com/s/is3luc5u1q9k1ci/Press.zip?dl=1">Download Our Press Kit</a> for high-res images. {/*For more background knowledge read our <a target="_blank" styleName="textLink" href="/assets/Thesis_Refresh.pdf">Thesis</a>.*/} Feel free to quote this page and please link back to it. We’re also happy to answer any open questions you might have or give you more background information — <a styleName="textLink" href="mailto:hello@refresh.study">Just Email Us</a></p>
             </div>
           </footer>
         </div>
