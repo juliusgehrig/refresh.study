@@ -47,7 +47,7 @@ class Hero extends Component {
 					<div onClick={this.hideVideo}  styleName="background-overlay">
 						<div styleName="video-overlay">
 							<div styleName="responsive-video">
-								<iframe src="https://www.youtube.com/embed/Fcke6xaHzOg?rel=0&amp;showinfo=0;autoplay=1;controls=false" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<iframe src="https://www.youtube.com/embed/tulrXs47HTw?rel=0&amp;showinfo=0;autoplay=1;controls=false" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
