@@ -10,17 +10,17 @@ import Footer from 'components/Footer'
 const Linklist = (props) => (
   <div styleName="container">
     <Wrapper>
-      <div class="row center-xs">
-        <div class="col-xs-12">
+      <div className="row center-xs">
+        <div className="col-xs-12">
           <h1 styleName="pageTitle">
             <RevealText text="Reading List"></RevealText>
           </h1>
         </div>
       </div>
       <h3 styleName="subheadline"><RevealText text="From our research"></RevealText></h3>
-      <div class="row center-xs">
-        <div class="col-md-9 col-xs-12">
-          <div class="box">
+      <div className="row center-xs">
+        <div className="col-md-9 col-xs-12">
+          <div className="box">
             <div styleName="linkWrapper">
               <LinkListLink link="https://www.buzzfeed.com/josephbernstein/meet-the-man-who-invented-tabs" title="Meet The Man Who Invented The Browser Tab" description="Buzzfeed interview with Adam Stiles, the inventor of the browser tab"></LinkListLink>
               <LinkListLink link="https://www.ofcom.org.uk/research-and-data/telecoms-research/mobile-smartphones/smartphone-by-default-2016" title="Smartphone by default internet users" description="Research report by Ofcom on people who access the internet mainly through their smartphone"></LinkListLink>

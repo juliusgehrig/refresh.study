@@ -168,7 +168,7 @@ class Home extends React.Component {
 								<SaveIcon />
 							</div>
 							<h2>Saving & recalling</h2>
-							<p>Saving information and files for later should be more intuitive. The browser should help categorising saved information and surface it when it could be relevant. </p>
+							<p>Saving information and files for later should be more intuitive. Browsers should help categorising saved information and surface it when it could be relevant. </p>
 						</div>
 						<div className="col-lg-4 col-md-3 col-sm-7 col-xs-12">
 							<div styleName="problem-icon">
