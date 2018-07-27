@@ -187,7 +187,7 @@ class Home extends React.Component {
 						<div className="col-lg-10  col-xs-12">
 							<div styleName="section-intro">
 								<h1 styleName="section-headline">Stay Organised</h1>
-								<p>Tabs were introduced to the browser to offer the ability to browser multiple websites in one browser window. But they have become a lot more than that. Leaving tabs open is a common way to remind yourself of something later. But those open tabs are there all the time to distract us from what we want to work on right now. Refresh lets you to organise your browsing in Spaces.
+								<p>Tabs were introduced to offer the ability to browse multiple websites in one window. But they have become a lot more than that. Leaving tabs open is a common way to remind yourself of something later. But those open tabs are there all the time to distract us from what we want to work on right now. Refresh lets you to organise your browsing in Spaces.
 									A Space is a collection of open tabs and pages you saved for later centered around a topic or a part of your life. Bookmarks, favorites, and the reading list are reduced to one simple way to save pages for later. Saved pages are connected to each Space and are previewed visually below your open tabs. They are automatically grouped by categories with the option to create your own groups if you want to.
 								</p>
 								<DeviceFrame>
