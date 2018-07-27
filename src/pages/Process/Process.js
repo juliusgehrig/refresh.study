@@ -23,7 +23,7 @@ const Process = (props) => (
       <div class="col-md-7 col-xs-10 col-xs-12">
         <div class="box">
           <h3 styleName="headline">Backstory</h3>
-          <p styleName="copy">We are <a styleName="textLink" target="_blank" rel="noopener noreferrer" href="http://juliussohn.de">Julius Sohn ↗</a> and <a styleName="textLink" target="_blank" rel="noopener noreferrer" href="https://julius.fm">Julius Gehrig ↗</a>, designers and students of communication design. Refresh is our bachelor thesis and was created at htw Berlin in 2018. It's a collection of ideas for a modern web browser for touchscreen devices based on iOS Safari. The prototypes we developed are all designed for iPad but their concepts could apply to desktop and smaller touchscreens as well.
+          <p styleName="copy">We are <a styleName="textLink" target="_blank" rel="noopener noreferrer" href="https://twitter.com/juliussohn">Julius Sohn ↗</a> and <a styleName="textLink" target="_blank" rel="noopener noreferrer" href="https://twitter.com/juliusgehrig">Julius Gehrig ↗</a>, designers and students of communication design. Refresh is our bachelor thesis and was created at htw Berlin in 2018. It's a collection of ideas for a modern web browser for touchscreen devices based on iOS Safari. The prototypes we developed are all designed for iPad but their concepts could apply to desktop and smaller touchscreens as well.
           </p>
         </div>
       </div>

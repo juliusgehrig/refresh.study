@@ -13,10 +13,10 @@ class Previews extends React.Component {
 		}
 
 		this.items = [
-			'/assets/images/placeholder/preview-product.svg',
-			'/assets/images/placeholder/preview-article.svg',
-			'/assets/images/placeholder/preview-video.svg',
-			'/assets/images/placeholder/preview-event.svg'
+			'/assets/images/previews/preview-product.png',
+			'/assets/images/previews/preview-article.png',
+			'/assets/images/previews/preview-video.png',
+			'/assets/images/previews/preview-event.png'
 		]
 
 		this.changeIndex = this.changeIndex.bind(this)

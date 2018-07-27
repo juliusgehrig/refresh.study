@@ -13,7 +13,7 @@ const Footer = (props) => (
           <footer styleName={`container-${props.theme}`}>
             <div styleName="sectionBig">
               <h4 styleName="sectionHeader">About</h4>
-              <h3 styleName="whodis">Refresh is a project by <a styleName="textLink" target="blank" href="http://juliussohn.de">Julius Sohn</a> and <a styleName="textLink" target="blank" href="https://julius.fm">Julius Gehrig</a><br/> It was created at htw Berlin in 2018 as our thesis.</h3>
+              <h3 styleName="whodis">Refresh is a project by <a styleName="textLink" target="blank" href="https://twitter.com/juliussohn">Julius Sohn</a> and <a styleName="textLink" target="blank" href="https://twitter.com/juliusgehrig">Julius Gehrig</a><br/> It was created at htw Berlin in 2018 as our thesis.</h3>
             </div>
             <div styleName="sectionSmall">
               <h4 styleName="sectionHeader">More info</h4>
