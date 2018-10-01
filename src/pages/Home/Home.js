@@ -132,6 +132,25 @@ class Home extends React.Component {
 		);
 	}
 
+	renderPress(){
+		return(
+			<section>
+				<Wrapper>
+				<h3 styleName="problems-headline">Featured in</h3>
+				<div styleName="press-logos">
+					<a target="_blank" title="t3n Magagzine" href="https://t3n.de/news/refresh-browser-design-konzept-1097906/"><img src="assets/press-logos/t3n.png"/></a>
+					<a target="_blank" title="Designer News" href="https://www.designernews.co/stories/96301-refresh-concept-for-a-new-kind-of-web-browser"><img src="assets/press-logos/dn.png"/></a>
+					<a target="_blank" title="Ycombinator Hackernews" href="https://news.ycombinator.com/item?id=17638477"><img src="assets/press-logos/hn.png"/></a>
+					<a target="_blank" title="ifun" href="https://www.ifun.de/refresh-design-konzept-erfindet-ipad-browser-neu-125285/"><img src="assets/press-logos/ifun.png"/></a>
+					<a target="_blank" title="Giga.de" href="https://www.giga.de/downloads/google-chrome-64-bit/news/vorsicht-google-chrome-berliner-studenten-stellen-den-browser-der-zukunft-vor/"><img src="assets/press-logos/giga.png"/></a>
+					<a target="_blank" title="PC Welt" href="https://www.pcwelt.de/a/browser-refresh-innovativer-browser-aus-deutschland,3451764"><img src="assets/press-logos/pc-welt.png"/></a>
+					
+				</div>
+				</Wrapper>
+			</section>
+		);
+	}
+
 	render() {
 		const { currentPreview } = this.state
 		return (<div >
@@ -326,6 +345,9 @@ class Home extends React.Component {
 						</div>
 					</div>
 				</Wrapper>
+			</section>
+			<section>
+				{this.renderPress()}
 			</section>
 			<Footer theme="dark"></Footer>
 		</div >

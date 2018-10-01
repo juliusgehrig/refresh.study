@@ -187,6 +187,20 @@
 	margin-top:40px;
 }
 
+.press-logos{
+	display: flex;
+	grid-column-gap: 3	0px;
+	margin-bottom:100px;
+	&>a{
+		display: block;
+		opacity: .5;
+		margin: 0 20px;
+		transition: all .3s;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
 
 
 @include breakpoint(tablet){
