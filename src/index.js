@@ -6,11 +6,11 @@ import { BrowserRouter } from 'react-router-dom'
 import ScrollToTop from 'components/ScrollToTop'
 
 
-
 ReactDOM.render(
-	<BrowserRouter>
-		<ScrollToTop>
-			<App />
-		</ScrollToTop>
-	</BrowserRouter>, document.getElementById('root'));
+		<BrowserRouter>
+			<ScrollToTop>
+				<App />
+			</ScrollToTop>
+		</BrowserRouter>
+	, document.getElementById('root'));
 registerServiceWorker();

@@ -8,14 +8,55 @@ import ErrorPage from 'pages/ErrorPage'
 import Process from 'pages/Process'
 import Linklist from 'pages/Linklist'
 import Header from 'components/Header'
-import CookieBanner from 'components/CookieBanner'
+class RefreshTimer extends Component {
+  constructor() {
+    super();
+    this.timeout;
+    this.timeoutDuration=30
 
+  }
+  componentDidMount() {
+    window.onmousemove =()=>{
+      this.setTimer()
+    }
+    window.onscroll =()=>{
+      this.setTimer()
+    }
+    window.onclick =()=>{
+      this.setTimer()
+    }
+    this.setTimer()
+  }
+
+  setTimer() {
+    console.log('settimer')
+    if (this.timeout) {
+      clearTimeout(this.timeout); //cancel the previous timer.
+      this.timeout = null;
+    }
+    this.timeout = setTimeout(() => {
+      window.location.reload()
+    }
+      , this.timeoutDuration*1000)
+  }
+
+  render() {
+    return (
+      <React.Fragment></React.Fragment>
+    )
+
+  }
+}
 class App extends Component {
+  componentDidMount() {
+    window.onbeforeunload = function () { window.scrollTo(0, 0); }
+  }
   render() {
     return (
 
       <div>
-        <Header/>
+        <RefreshTimer ></RefreshTimer>
+        <Header />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={Process} />
@@ -23,7 +64,6 @@ class App extends Component {
           <Route path='*' exact={true} component={ErrorPage} />
 
         </Switch>
-        <CookieBanner></CookieBanner>
       </div>
     );
   }

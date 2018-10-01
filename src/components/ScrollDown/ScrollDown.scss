@@ -1,0 +1,27 @@
+@import "~styles/variables";
+.container{
+  position:absolute;
+  bottom:20px;
+  color:white;
+  opacity: .6;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size:13px;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(60px);
+	}
+}
+.text{
+  margin-top: 5px;
+}
+
+.wheel {
+	animation: scroll ease 2s infinite;
+}

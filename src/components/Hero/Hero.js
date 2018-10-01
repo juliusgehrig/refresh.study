@@ -2,6 +2,7 @@ import CSSModules from 'react-css-modules';
 import React, { Component } from 'react';
 import styles from './Hero.scss'
 import RevealText from 'components/RevealText'
+import ScrollDown from 'components/ScrollDown'
 
 
 class Hero extends Component {
@@ -52,7 +53,7 @@ class Hero extends Component {
 						</div>
 					</div>
 				}
-
+				<ScrollDown></ScrollDown>
 			</div>)
 	}
 }
