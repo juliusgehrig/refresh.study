@@ -25,7 +25,7 @@ class RefreshTimer extends Component {
     window.onclick =()=>{
       this.setTimer()
     }
-    this.setTimer()
+   // this.setTimer()
   }
 
   setTimer() {
